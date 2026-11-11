@@ -13,14 +13,15 @@ import {
 const BenefitsAndSecuritySection = () => {
   // Benefits Grid Data
   const benefits = [
+
     { id: 1, title: 'লাইভ ট্র্যাকিং', icon: MapPin },
     { id: 2, title: 'মাইলেজ রিপোর্ট', icon: Gauge },
     { id: 3, title: 'ডেস্টিনেশন এলার্ট', icon: Bell },
     { id: 4, title: 'ফুয়েল মনিটরিং', icon: Fuel },
-    { id: 5, title: 'এসি অন/অফ নোটিফিকেশন', icon: Snowflake },
-    { id: 6, title: 'স্পিড ভায়োলেশন এলার্ট', icon: Activity },
-    { id: 7, title: 'ইঞ্জিন অন/অফ নোটিফিকেশন', icon: Power },
-    { id: 8, title: 'ডেইলি সামারি', icon: FileText },
+
+    { id: 5, title: 'স্পিড ভায়োলেশন এলার্ট', icon: Activity },
+    { id: 6, title: 'ইঞ্জিন অন/অফ নোটিফিকেশন', icon: Power },
+    { id: 7, title: 'ডেইলি সামারি', icon: FileText },
   ];
 
   return (
@@ -56,7 +57,7 @@ const BenefitsAndSecuritySection = () => {
       </section>
 
       {/* SECTION 2: Dushchinta 1 - Anti-Theft (Gray BG) */}
-      <section className="w-full bg-[#EAEAEA] py-12 md:py-16 border-b border-gray-300/40">
+      <section className="w-full bg-[#ffffff] py-12 md:py-16 border-b border-gray-300/40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-5 flex justify-center lg:justify-end items-center order-1 lg:order-2">
@@ -101,34 +102,43 @@ const BenefitsAndSecuritySection = () => {
         </div>
       </section>
 
-      {/* SECTION 3: Dushchinta 2 - AC & Fuel (White BG) */}
-      <section className="w-full bg-white py-12 md:py-16 border-b border-gray-200">
+ {/* SECTION 10: Dushchinta 9 - Driver Misuse (Gray BG) */}
+      <section className="w-full bg-[#EAEAEA] py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-6 flex justify-center lg:justify-start items-center order-1 lg:order-1">
+            <div className="lg:col-span-6 flex justify-center lg:justify-end items-center order-1 lg:order-2">
               <img
-                src="https://prohori.com/wp-content/uploads/2025/08/sleeping-in-car-with-ac-on.svg"
-                alt="Sleeping in car with AC on"
+                src="https://prohori.com/wp-content/uploads/2025/08/driver-misusing-the-car.svg"
+                alt="Driver misusing the car"
                 className="block w-full max-w-[350px] sm:max-w-[420px] lg:max-w-[460px] h-auto object-contain"
                 loading="lazy"
               />
             </div>
-            <div className="lg:col-span-6 space-y-5 text-left order-2 lg:order-2">
-              <div className="inline-block bg-[#EAEAEA] px-3 py-1 rounded shadow-sm text-xs text-gray-600 font-medium border border-gray-200">
-                দুশ্চিন্তা ২
+            <div className="lg:col-span-6 space-y-5 text-left order-2 lg:order-1">
+              <div className="inline-block bg-white px-3 py-1 rounded shadow-sm text-xs text-gray-600 font-medium border border-gray-200">
+                দুশ্চিন্তা 2
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2C3E50] leading-tight">
-                অপ্রয়োজনীয় এয়ারকন্ডিশনার ব্যবহারে ফুয়েল নষ্ট হওয়ার কারণে বিরক্ত?
+                ড্রাইভার গাড়ির অপব্যবহার করছে না তো?
               </h2>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                গাড়ি মালিকদের জন্য এটি একটি সাধারণ সমস্যা, বিশ্বস্ত চালক আপনার অজান্তে AC চালাচ্ছে। এই ছোট অভ্যাসটি আপনার ফুয়েল খরচ এবং রক্ষণাবেক্ষণ খরচ অনেক বৃদ্ধি করতে পারে।
+                অনেক ড্রাইভারই আছে, মালিককে না জানিয়ে খালি গাড়িতে অনৈতিকভাবে যাত্রী উঠিয়ে ট্রিপ দেয়।
               </p>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                আমাদের GPS Tracker রিয়েল-টাইমে AC-এর অবস্থা এবং ব্যবহারের বিস্তারিত তথ্য প্রদান করে।
+                আপনার সিঙ্গেল টেনশন, trackvioর মাল্টিপল রিলিফ!
               </p>
               <ul className="space-y-3 text-sm sm:text-base text-gray-700 pt-1">
                 <li className="leading-relaxed">
-                  <strong className="text-gray-900 font-bold">• AC অন/অফ নোটিফিকেশন:</strong> রিয়েল-টাইমে AC চালু/বন্ধ অবস্থার তথ্য সরাসরি আপনার ফোনে প্রদান করবে trackvio, যা আপনার গাড়ির ফুয়েল খরচ মনিটর এবং নিয়ন্ত্রণে সাহায্য করে। এই ট্র্যাকিং ফিচারটি <a href="#packages" className="text-[#E85125] hover:underline font-medium">স্ট্যান্ডার্ড এবং প্রিমিয়াম প্যাকেজ</a>-এ অন্তর্ভুক্ত।
+                  <strong className="text-gray-900 font-bold">• লাইভ ট্র্যাকিং:</strong> লাইভ দেখুন গাড়ি যেখানে থাকার কথা সেখানে আছে কি না।
+                </li>
+                <li className="leading-relaxed">
+                  <strong className="text-gray-900 font-bold">• ইঞ্জিন অন/অফ নোটিফিকেশন:</strong> জানতে পারবেন গাড়ির ইঞ্জিন কতবার অন/অফ হচ্ছে।
+                </li>
+                <li className="leading-relaxed">
+                  <strong className="text-gray-900 font-bold">• ডোর ওপেন এলার্ট:</strong> জানুন গাড়ির কোন দরজা কোথায় কখন খোলা হচ্ছে।
+                </li>
+                <li className="leading-relaxed">
+                  <strong className="text-gray-900 font-bold">• অডিও স্পায়িং:</strong> গাড়ির ভিতরে কি কথা হচ্ছে তা আপনার স্মার্ট ফোনে শুনতে পাবেন।
                 </li>
               </ul>
               <div className="pt-4">
@@ -142,7 +152,7 @@ const BenefitsAndSecuritySection = () => {
       </section>
 
       {/* SECTION 4: Dushchinta 3 - Fuel Usage (Gray BG) */}
-      <section className="w-full bg-[#EAEAEA] py-12 md:py-16 border-b border-gray-300/40">
+      <section className="w-full bg-[#f6f3f3] py-12 md:py-16 border-b border-gray-300/40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-6 flex justify-center lg:justify-end items-center order-1 lg:order-2">
@@ -399,54 +409,7 @@ const BenefitsAndSecuritySection = () => {
         </div>
       </section>
 
-      {/* SECTION 10: Dushchinta 9 - Driver Misuse (Gray BG) */}
-      <section className="w-full bg-[#EAEAEA] py-12 md:py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-6 flex justify-center lg:justify-end items-center order-1 lg:order-2">
-              <img
-                src="https://prohori.com/wp-content/uploads/2025/08/driver-misusing-the-car.svg"
-                alt="Driver misusing the car"
-                className="block w-full max-w-[350px] sm:max-w-[420px] lg:max-w-[460px] h-auto object-contain"
-                loading="lazy"
-              />
-            </div>
-            <div className="lg:col-span-6 space-y-5 text-left order-2 lg:order-1">
-              <div className="inline-block bg-white px-3 py-1 rounded shadow-sm text-xs text-gray-600 font-medium border border-gray-200">
-                দুশ্চিন্তা ৯
-              </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2C3E50] leading-tight">
-                ড্রাইভার গাড়ির অপব্যবহার করছে না তো?
-              </h2>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                অনেক ড্রাইভারই আছে, মালিককে না জানিয়ে খালি গাড়িতে অনৈতিকভাবে যাত্রী উঠিয়ে ট্রিপ দেয়।
-              </p>
-              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                আপনার সিঙ্গেল টেনশন, trackvioর মাল্টিপল রিলিফ!
-              </p>
-              <ul className="space-y-3 text-sm sm:text-base text-gray-700 pt-1">
-                <li className="leading-relaxed">
-                  <strong className="text-gray-900 font-bold">• লাইভ ট্র্যাকিং:</strong> লাইভ দেখুন গাড়ি যেখানে থাকার কথা সেখানে আছে কি না।
-                </li>
-                <li className="leading-relaxed">
-                  <strong className="text-gray-900 font-bold">• ইঞ্জিন অন/অফ নোটিফিকেশন:</strong> জানতে পারবেন গাড়ির ইঞ্জিন কতবার অন/অফ হচ্ছে।
-                </li>
-                <li className="leading-relaxed">
-                  <strong className="text-gray-900 font-bold">• ডোর ওপেন এলার্ট:</strong> জানুন গাড়ির কোন দরজা কোথায় কখন খোলা হচ্ছে।
-                </li>
-                <li className="leading-relaxed">
-                  <strong className="text-gray-900 font-bold">• অডিও স্পায়িং:</strong> গাড়ির ভিতরে কি কথা হচ্ছে তা আপনার স্মার্ট ফোনে শুনতে পাবেন।
-                </li>
-              </ul>
-              <div className="pt-4">
-                <a href="#packages" className="inline-block bg-gradient-to-r from-[#FF512F] to-[#DD2476] hover:from-[#DD2476] hover:to-[#FF512F] text-white font-medium px-8 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 text-base">
-                  প্যাকেজ দেখুন
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
     </div>
   );

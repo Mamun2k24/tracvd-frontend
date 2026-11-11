@@ -23,10 +23,10 @@ import {
 import PopularProduct from "../../pages/home/sections/popularProducts/PopularProducts";
 
 const BANNER =
-  "https://prohori.com/wp-content/uploads/2026/09/prohori-gps-tracker-server-banner.webp";
+  "https://i.ibb.co.com/1Gghbn4x/tracview-b1.jpg";
 
 const TRACKING_IMAGE =
-  "https://i.ibb.co.com/DP5nSK7f/tracvd.png";
+  "https://i.ibb.co.com/xtxVs1gk/hero.png";
 
 const PHONE = "01700786848";
 
@@ -615,14 +615,14 @@ export default function PricingPage() {
             <h2 className="text-xl font-bold md:text-2xl">
               আপনার প্রয়োজন অনুযায়ী GPS ট্র্যাকিং প্যাকেজ দেখুন
             </h2>
-
+{/* 
             <a
               href="#pricing-products"
               aria-label="প্যাকেজ দেখুন"
               className="mt-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#ff7912] text-white shadow-md transition hover:bg-orange-600"
             >
               <ArrowDown size={22} />
-            </a>
+            </a> */}
           </div>
 
           <div id="pricing-products" className="scroll-mt-10 pt-6">
