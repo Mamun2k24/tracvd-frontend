@@ -15,7 +15,7 @@ const MainLayout = () => {
       <ScrollToTop />
       <Navigation />
       <Outlet />
-      <BottomMobileNav />
+      {/* <BottomMobileNav /> */}
       <NewFooter />
 
 

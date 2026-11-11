@@ -300,7 +300,7 @@ export default function NewFooter({ onSubscribe }) {
 
       {/* TOP CTA SECTION */}
       <div className="relative z-10 border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-10">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             
             {/* Left CTA */}
@@ -404,7 +404,7 @@ export default function NewFooter({ onSubscribe }) {
 
       {/* MAIN FOOTER */}
       <div className="relative z-10">
-        <div className="mx-auto max-w-7xl px-4 pb-14 pt-16 sm:px-6 lg:px-8 lg:pt-20">
+        <div className="mx-auto max-w-7xl px-4 pb-8 pt-4 sm:px-6 lg:px-8 lg:pt-16">
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10">
 
             {/* Company Information */}
@@ -470,22 +470,22 @@ export default function NewFooter({ onSubscribe }) {
               </div>
             </div>
 
-            {/* Sitemap */}
-            <div className="lg:col-span-2">
-              <FooterHeading>সাইট ম্যাপ</FooterHeading>
-              <nav aria-label="Footer Sitemap" className="flex flex-col items-start gap-4">
-                {sitemap.map((item) => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
-                    className="group inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-orange-400"
-                  >
-                    <span className="h-1.5 w-1.5 rounded-full bg-orange-500/50 transition group-hover:bg-orange-400" />
-                    {item.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
+          {/* Sitemap */}
+<div className="hidden lg:col-span-2 lg:block">
+  <FooterHeading>সাইট ম্যাপ</FooterHeading>
+  <nav aria-label="Footer Sitemap" className="flex flex-col items-start gap-4">
+    {sitemap.map((item) => (
+      <Link
+        key={item.to}
+        to={item.to}
+        className="group inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-orange-400"
+      >
+        <span className="h-1.5 w-1.5 rounded-full bg-orange-500/50 transition group-hover:bg-orange-400" />
+        {item.label}
+      </Link>
+    ))}
+  </nav>
+</div>
 
             {/* Services */}
             <div className="lg:col-span-2">
@@ -513,7 +513,7 @@ export default function NewFooter({ onSubscribe }) {
                 তথ্য পেতে আমাদের নিউজলেটারে সাবস্ক্রাইব করুন।
               </p>
 
-              <form
+              {/* <form
                 onSubmit={handleSubscribe}
                 className="flex w-full max-w-md overflow-hidden rounded-xl border border-white/15 bg-white/[0.07] p-1.5 transition focus-within:border-orange-400/60"
               >
@@ -534,7 +534,7 @@ export default function NewFooter({ onSubscribe }) {
                 >
                   {submitting ? "Sending..." : "Subscribe"}
                 </button>
-              </form>
+              </form> */}
 
               {subscribeMessage && (
                 <p role="status" className="mt-3 text-xs text-orange-300">

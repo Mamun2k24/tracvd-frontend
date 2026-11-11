@@ -292,7 +292,7 @@ function DemoSection() {
 // ----------------- REVIEWS SECTION (NEW) -----------------
 function ReviewsSection() {
   return (
-    <section className="bg-[#e9e9e9] py-14 md:py-16">
+    <section className="bg-[#e9e9e9] py-10 md:py-12">
       <div className="mx-auto max-w-6xl px-4">
         {/* Title */}
         <div className="text-center">
@@ -303,7 +303,7 @@ function ReviewsSection() {
         </div>
 
         {/* Content Box */}
-        <div className="mt-10 flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch">
+        <div className="mt-2 flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch">
           
           {/* Left Google Badge */}
           <div className="flex flex-col items-center justify-center p-4 text-center">
@@ -448,7 +448,7 @@ function ComparisonSection() {
   };
 
   return (
-    <section className="bg-slate-50 py-16 md:py-24">
+    <section className="bg-slate-50 py-10 md:py-14">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="text-center">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-[#ff7912]">
@@ -551,7 +551,7 @@ function FAQSection() {
   const [openFaq, setOpenFaq] = useState(0);
 
   return (
-    <section className="bg-white pb-20 pt-10">
+    <section className="bg-white pb-20 pt-5">
       <div className="mx-auto max-w-4xl px-4">
         <h2 className="mb-8 text-center text-2xl font-bold text-gray-900">
           সাধারণ জিজ্ঞাসা
@@ -601,7 +601,7 @@ function FAQSection() {
 export default function PricingPage() {
   return (
     <main className="w-full overflow-x-hidden font-sans text-gray-800">
-      <section className="bg-[#e8e8e8] py-6 md:py-14">
+      <section className="bg-[#e8e8e8] py-4">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mx-auto max-w-5xl overflow-hidden rounded-md bg-white shadow-sm">
             <img
@@ -625,7 +625,7 @@ export default function PricingPage() {
             </a>
           </div>
 
-          <div id="pricing-products" className="scroll-mt-14 pt-8">
+          <div id="pricing-products" className="scroll-mt-10 pt-6">
             <PopularProduct />
           </div>
         </div>

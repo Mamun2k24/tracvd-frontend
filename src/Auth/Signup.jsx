@@ -236,9 +236,9 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_#fff7ed_0,_#f8fafc_42%,_#f1f5f9_100%)] flex items-center justify-center p-0 lg:p-6 font-sans antialiased text-slate-800">
-      <div className="w-full max-w-[1180px] min-h-0 lg:min-h-[720px] grid grid-cols-1 lg:grid-cols-12 bg-white lg:rounded-[32px] shadow-[0_24px_70px_-28px_rgba(15,23,42,0.28)] border border-white overflow-hidden">
+      <div className="w-full max-w-[1180px] min-h-0 lg:min-h-[700px] grid grid-cols-1 lg:grid-cols-12 bg-white lg:rounded-[32px] shadow-[0_24px_70px_-28px_rgba(15,23,42,0.28)] border border-white overflow-hidden">
         {/* ================= LEFT SIDE PANEL: BRAND & ASSURANCES ================= */}
-        <div className="lg:col-span-5 bg-gradient-to-br from-[#fffaf5] via-white to-orange-50 px-6 py-5 md:p-12 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-orange-100/70 relative overflow-hidden">
+        <div className="lg:col-span-5 px-6 py-5 md:p-12 flex flex-col justify-between relative overflow-hidden">
           <div className="absolute -top-20 -right-20 w-72 h-72 bg-orange-200/30 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-amber-100/60 rounded-full blur-3xl pointer-events-none" />
 
@@ -353,7 +353,7 @@ const Signup = () => {
           <div className="w-full max-w-[420px] mx-auto space-y-6">
             <div className="space-y-1.5 text-center lg:text-left">
               <span className="inline-flex mb-2 rounded-full bg-orange-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-orange-600">
-                Kroykori Account
+                Trackvio
               </span>
               <h3 className="text-3xl font-black tracking-tight text-slate-900">
                 Welcome Back!
@@ -628,24 +628,7 @@ const Signup = () => {
               </>
             )}
 
-            {/* OAUTH INTEGRATION FRAMEWORK (Google API Trigger) */}
-            <div className="space-y-4 pt-2">
-              <div className="relative flex py-2 items-center">
-                <div className="flex-grow border-t border-slate-100"></div>
-                <span className="flex-shrink mx-4 text-slate-400 text-xs font-semibold uppercase tracking-wider">
-                  or continue with
-                </span>
-                <div className="flex-grow border-t border-slate-100"></div>
-              </div>
-
-              <button
-                type="button"
-                onClick={handleGoogleLogin}
-                className="w-full flex items-center justify-center border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-sm"
-              >
-                <GoogleIcon /> Continue with Google
-              </button>
-            </div>
+          
 
             {/* Bottom Security Commitment Informational Tag */}
             <div className="bg-orange-50/30 border border-orange-100/40 rounded-xl p-3 text-center text-[11px] font-bold text-orange-700 flex items-center justify-center gap-1.5">
