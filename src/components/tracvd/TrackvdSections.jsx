@@ -35,7 +35,7 @@ export default function TrackvdSections() {
   const visibleReviews = [0, 1, 2].map(i => initialReviews[(reviewStart + i) % initialReviews.length]);
   return <>
     <section className="bg-[#e7e7e7] pb-16 pt-8"><div className="mx-auto max-w-[1000px] px-4">
-      <SectionTitle>প্রহরী ব্যবহারকারীদের কথা</SectionTitle>
+      <SectionTitle>trackvio ব্যবহারকারীদের কথা</SectionTitle>
       <div className="grid items-center gap-6 md:grid-cols-[190px_1fr] lg:gap-8">
         <div className="text-center"><h3 className="text-[21px] font-semibold">GOOD</h3><div className="mt-1 text-[30px] leading-none tracking-[-2px] text-[#ffb400]">★★★★<span className="text-gray-300">★</span></div><p className="mt-1 text-sm">Based on <strong>70 reviews</strong></p><div className="mt-1 text-[31px] font-medium tracking-[-2px]"><span className="text-[#4285f4]">G</span><span className="text-[#ea4335]">o</span><span className="text-[#fbbc05]">o</span><span className="text-[#4285f4]">g</span><span className="text-[#34a853]">l</span><span className="text-[#ea4335]">e</span></div></div>
         <div className="relative"><button aria-label="Previous reviews" type="button" onClick={() => setReviewStart(v => (v + initialReviews.length - 1) % initialReviews.length)} className="absolute -left-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white px-3 py-2 shadow">‹</button><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{visibleReviews.map((r, i) => <ReviewCard key={`${r.name}-${i}`} review={r} />)}</div><button aria-label="Next reviews" type="button" onClick={() => setReviewStart(v => (v + 1) % initialReviews.length)} className="absolute -right-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white px-3 py-2 shadow">›</button></div>

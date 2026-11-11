@@ -26,7 +26,7 @@ const BANNER =
   "https://prohori.com/wp-content/uploads/2026/09/prohori-gps-tracker-server-banner.webp";
 
 const TRACKING_IMAGE =
-  "https://prohori.com/wp-content/uploads/2026/05/prohori-vts-live-location-tracking.webp";
+  "https://i.ibb.co.com/DP5nSK7f/tracvd.png";
 
 const PHONE = "01700786848";
 
@@ -601,7 +601,7 @@ function FAQSection() {
 export default function PricingPage() {
   return (
     <main className="w-full overflow-x-hidden font-sans text-gray-800">
-      <section className="bg-[#e8e8e8] py-10 md:py-14">
+      <section className="bg-[#e8e8e8] py-6 md:py-14">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mx-auto max-w-5xl overflow-hidden rounded-md bg-white shadow-sm">
             <img
@@ -625,7 +625,7 @@ export default function PricingPage() {
             </a>
           </div>
 
-          <div id="pricing-products" className="scroll-mt-24 pt-8">
+          <div id="pricing-products" className="scroll-mt-14 pt-8">
             <PopularProduct />
           </div>
         </div>

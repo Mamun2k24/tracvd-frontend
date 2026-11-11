@@ -22,11 +22,11 @@ const FEATURE_SECTIONS = [
     bgColor: "bg-white",
     title: "গাড়ি কোথায় আছে জানতে পারবো?",
     subtitle: "(একসাথে অনেক গাড়ির দায়িত্ব আপনার কাঁধে। হঠাৎ যেকোন একটি গাড়ির খোঁজ জানতে চাচ্ছেন, কিন্তু ড্রাইভারের উপরও ভরসা করতে পারছেন না।)",
-    heading: "আপনার সমস্যাই প্রহরীর মাথাব্যথার কারণ",
+    heading: "আপনার সমস্যাই trackvioর মাথাব্যথার কারণ",
     points: [
-      "লাইভ ট্র্যাকিং: প্রহরী পোর্টালে গাড়ির নাম্বার লিখে সার্চ করে আপনি যেকোনও গাড়ির তৎক্ষণাৎ অবস্থান জানতে পারবেন।"
+      "লাইভ ট্র্যাকিং: trackvio পোর্টালে গাড়ির নাম্বার লিখে সার্চ করে আপনি যেকোনও গাড়ির তৎক্ষণাৎ অবস্থান জানতে পারবেন।"
     ],
-    highlightBox: "একসাথে অনেক গাড়ি,\nপ্রহরী দিয়ে ট্র্যাক করি!",
+    highlightBox: "একসাথে অনেক গাড়ি,\trackvio দিয়ে ট্র্যাক করি!",
     buttonBg: "bg-blue-500 hover:bg-blue-600",
     image: "https://prohori.com/wp-content/uploads/2025/08/Fleet-2-300x251.png",
     imageFirst: false
@@ -36,11 +36,11 @@ const FEATURE_SECTIONS = [
     bgColor: "bg-white",
     title: "আমার গাড়ির সংখ্যা তো অনেক, প্রতিটি গাড়ির আলাদা আলাদা তথ্য জানা যাবে?",
     subtitle: "(একসাথে অনেক গাড়ির দায়িত্ব আপনার কাঁধে। হঠাৎ যেকোন একটি গাড়ির খোঁজ জানতে চাচ্ছেন, কিন্তু ড্রাইভারের উপরও ভরসা করতে পারছেন না)",
-    heading: "আপনার প্রশ্ন, প্রহরীর উত্তর",
+    heading: "আপনার প্রশ্ন, trackvioর উত্তর",
     points: [
       "ডেইলি সামারি- সবগুলো গাড়ির সমস্ত তথ্য দিন শেষে একবারে সামারি আকারে অটোমেটিক আপনার মোবাইলে পৌঁছে যাবে।"
     ],
-    highlightBox: "সকল খবর কীভাবে জানি\nএতগুলো গাড়ির?\nসংখ্যাটা যতই হোক\nসাহায্য নিন প্রহরীর।",
+    highlightBox: "সকল খবর কীভাবে জানি\nএতগুলো গাড়ির?\nসংখ্যাটা যতই হোক\nসাহায্য নিন trackvioর।",
     buttonBg: "bg-blue-500 hover:bg-blue-600",
     image: "https://prohori.com/wp-content/uploads/2025/08/Fleet-3-300x256.png",
     imageFirst: true
@@ -50,11 +50,11 @@ const FEATURE_SECTIONS = [
     bgColor: "bg-cyan-50/70",
     title: "ফুয়েল কতটুকু আছে বা কতক্ষণ পরে রিফিল করতে হবে সেটা জানা যাবে?",
     subtitle: "(এক সাথে অনেক গাড়ি মেইনটেইন করতে গিয়ে এই ফুয়েল খরচ অনেক সময়ই বেড়ে যায়। আবার অনেক সময় পর্যাপ্ত ফুয়েল না থাকার কারণে রাস্তার মাঝখানেই গাড়ি বন্ধ হয়ে যায়, সেক্ষেত্রে প্রতিটি গাড়ির ফুয়েল লেভেল সম্পর্কে স্পষ্ট ধারনা থাকা জরুরী)।",
-    heading: "জ্বালানীর সকল উপাত্ত, প্রহরী দিচ্ছে লিখিত",
+    heading: "জ্বালানীর সকল উপাত্ত, trackvio দিচ্ছে লিখিত",
     points: [
       "ফুয়েল মনিটরিং সিস্টেম: আপনার ফোন গাড়ি কতটুকু জ্বালানী খরচ করেছে, কতটুকু জ্বালানী অবশিষ্ট আছে তার সকল উত্তর পাবেন স্মার্ট ফোনের এক ক্লিকেই।"
     ],
-    highlightBox: "কোন গাড়ি কতটুকু\nখরচ করলো জ্বালানী?\nপ্রহরী ব্যবহার করুন\nজেনে যাবেন এখনই!",
+    highlightBox: "কোন গাড়ি কতটুকু\nখরচ করলো জ্বালানী?\trackvio ব্যবহার করুন\nজেনে যাবেন এখনই!",
     buttonBg: "bg-orange-500 hover:bg-orange-600",
     image: "https://prohori.com/wp-content/uploads/2025/08/Fleet-4.png",
     imageFirst: false
@@ -64,11 +64,11 @@ const FEATURE_SECTIONS = [
     bgColor: "bg-white",
     title: "গাড়ি নির্দিষ্ট গন্তব্যে পৌঁছলে অটোম্যাটিক জানা যাবে?",
     subtitle: "(অনেক গাড়ি থাকায় ফ্লিট ম্যানেজারের পক্ষে সবগুলো গাড়ির তথ্য নির্দিষ্ট সময়ে নির্দিষ্ট গন্তব্যে পৌঁছলো কিনা সেটা জানাও জরুরী।)",
-    heading: "আপনার টেনশনে ভরসা করুন প্রহরীতে",
+    heading: "আপনার টেনশনে ভরসা করুন trackvioতে",
     points: [
       "ডেসটিনেশন অ্যালার্ট- ডেসটিনেশন অ্যালার্ট সেট করে দিলে গাড়ি সেট করে দেয়া গন্তব্যে পৌঁছলেই অটো এসএমএস পাবেন।"
     ],
-    highlightBox: "গাড়ি পৌঁছলে গন্তব্যে\nপ্রহরী জানাবে মন্তব্যে",
+    highlightBox: "গাড়ি পৌঁছলে গন্তব্যে\trackvio জানাবে মন্তব্যে",
     buttonBg: "bg-orange-500 hover:bg-orange-600",
     image: "https://prohori.com/wp-content/uploads/2025/08/Fleet-5.png",
     imageFirst: true
@@ -78,11 +78,11 @@ const FEATURE_SECTIONS = [
     bgColor: "bg-orange-50/60",
     title: "ড্রাইভার মিথ্যা বলছে না তো?",
     subtitle: "(অনেক সময় গাড়ি এমন হয় যে গাড়ি আছে গাবতলি ড্রাইভার বলছে মহাখালী। এমতাবস্থায় ফ্লিট ম্যানেজারের পক্ষে সুনির্দিষ্ট সিদ্ধান্ত নেয়া বেশ কষ্টসাধ্য হয়ে পড়ে)",
-    heading: "প্রহরীর চিকিৎসায়, আর নয় মিথ্যায়",
+    heading: "trackvioর চিকিৎসায়, আর নয় মিথ্যায়",
     points: [
       "লাইভ ট্র্যাকিং- লাইভ ট্র্যাকিং এর মাধ্যমে একজন ফ্লিট ম্যানেজার তার যেকোন গাড়ির তৎক্ষণাৎ অবস্থান সম্পর্কে স্পষ্ট ধারণা পাবেন।"
     ],
-    highlightBox: "কোথায় আছে গাড়ি\nগন্তব্যে কী পৌঁছলো?\nড্রাইভারকে ছাড়ুন\nপ্রহরীকে বলুন হ্যালো!",
+    highlightBox: "কোথায় আছে গাড়ি\nগন্তব্যে কী পৌঁছলো?\nড্রাইভারকে ছাড়ুন\trackvioকে বলুন হ্যালো!",
     buttonBg: "bg-purple-600 hover:bg-purple-700",
     image: "https://prohori.com/wp-content/uploads/2025/08/Fleet-6.png",
     imageFirst: false
@@ -92,13 +92,13 @@ const FEATURE_SECTIONS = [
     bgColor: "bg-white",
     title: "খাতায় না লিখেও পূর্ণাঙ্গ হিসাব রাখা সম্ভব?",
     subtitle: "(একসাথে অনেক ড্রাইভারের তথ্য খাতা কলমে রাখা বেশ সময় সাপেক্ষ। অথচ ড্রাইভারদের মধ্যে তুলনা করতে হলে এই হিসেবগুলো করা খুব জরুরী)",
-    heading: "খরচ কমিয়ে স্মার্ট হোন, খাতা ছেড়ে প্রহরী আনুন",
+    heading: "খরচ কমিয়ে স্মার্ট হোন, খাতা ছেড়ে trackvio আনুন",
     points: [
       "ডেইলি সামারি- সবগুলো গাড়ির সমস্ত তথ্য দিনশেষে একবারে সামারি আকারে অটোমেটিক আপনার মোবাইলে এসএমএস আকারে চলে যাবে।",
       "মাইলেজ রিপোর্ট- কোন দিন কোন রুটে কত কিলোমিটার ভ্রমণ করেছে তার রিপোর্ট পাওয়া যাবে।",
-      "ড্রাইভার র‍্যাংকিং- প্রহরী ব্যবহারে এসি, ফুয়েল, মাইলেজ ইত্যাদি বিভিন্ন ভিত্তিতে মাস শেষে ড্রাইভারদের অটোম্যাটিক র‍্যাংকিং পাওয়া যাবে।"
+      "ড্রাইভার র‍্যাংকিং- trackvio ব্যবহারে এসি, ফুয়েল, মাইলেজ ইত্যাদি বিভিন্ন ভিত্তিতে মাস শেষে ড্রাইভারদের অটোম্যাটিক র‍্যাংকিং পাওয়া যাবে।"
     ],
-    highlightBox: "বহু গাড়ি একবারে হিসাবটা টাফ?\nদেখে নিন প্রহরীর ডিজিটাল গ্রাফ",
+    highlightBox: "বহু গাড়ি একবারে হিসাবটা টাফ?\nদেখে নিন trackvioর ডিজিটাল গ্রাফ",
     buttonBg: "bg-purple-600 hover:bg-purple-700",
     image: "https://prohori.com/wp-content/uploads/2025/08/Fleet-7-300x244.png",
     imageFirst: true
@@ -110,7 +110,7 @@ export const Header = () => (
   <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
     <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div className="flex items-center space-x-2">
-        <span className="text-3xl font-extrabold text-orange-500 tracking-tight">প্রহরী</span>
+        <span className="text-3xl font-extrabold text-orange-500 tracking-tight">trackvio</span>
         <span className="text-xs bg-orange-100 text-orange-600 font-bold px-1.5 py-0.5 rounded">GPS</span>
       </div>
       <nav className="hidden md:flex space-x-6 text-sm text-gray-700 font-medium">
@@ -183,7 +183,7 @@ export const HeroSection = () => {
               <img src={CALL_CENTER_IMG} alt="Support" className="w-12 h-12 rounded-full border-2 border-white object-cover bg-white" />
               <div>
                 <h3 className="font-bold text-lg leading-tight">ফর্মটি পূরণ করুন।</h3>
-                <p className="text-xs text-orange-100">প্রহরী গ্রাহক সেবা প্রতিনিধির সহয়তা নিন।</p>
+                <p className="text-xs text-orange-100">trackvio গ্রাহক সেবা প্রতিনিধির সহয়তা নিন।</p>
               </div>
             </div>
 

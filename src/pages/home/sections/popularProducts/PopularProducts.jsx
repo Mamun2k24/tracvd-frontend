@@ -754,8 +754,8 @@ const PopularProduct = () => {
     <>
       <section
         className="
-          bg-[#e9e9e9] py-12
-          font-sans md:py-16
+          bg-[#e9e9e9] py-2
+          font-sans md:py-12
         "
       >
         <div className="mx-auto max-w-7xl px-3 sm:px-5 lg:px-8">
