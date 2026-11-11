@@ -754,7 +754,7 @@ const PopularProduct = () => {
     <>
       <section
         className="
-          bg-[#e9e9e9] py-2
+          bg-gradient-to-br from-[#FFF7ED] via-[#F8FAFC] to-[#EAF3FF] py-2
           font-sans md:py-6
         "
       >

@@ -77,7 +77,7 @@ export default function BlogPage() {
         <section
           key={section.slug}
           id={section.slug}
-          className={index % 2 === 0 ? "bg-[#e8e8e8]" : "bg-white"}
+          className={index % 2 === 0 ? "bg-gradient-to-br from-[#FFF7ED] via-[#F8FAFC] to-[#EAF3FF]" : "bg-white"}
         >
           <div className="mx-auto max-w-[1080px] px-4 py-9 sm:px-6 sm:py-11 lg:px-8 lg:py-12">
             <div className="mb-5 flex items-center justify-between gap-3">
