@@ -28,8 +28,8 @@ import {
 // App & Web Portal Links Updated
 const LINKS = {
   googlePlay: "https://play.google.com/store/apps/details?id=com.trackvio.app", // আপনার প্লে স্টোর অ্যাপ লিঙ্ক দিন
-  webPortal: "https://trackviobd.com", // আপনার ওয়েব পোর্টাল লিঙ্ক দিন
-  appStore: "https://apps.apple.com/app/trackvio", // আপনার অ্যাপল অ্যাপ স্টোর লিঙ্ক দিন
+  webPortal: "https://trackvdbd.com", // আপনার ওয়েব পোর্টাল লিঙ্ক দিন
+  appStore: "https://testflight.apple.com/join/hk1gJn19", // আপনার অ্যাপল অ্যাপ স্টোর লিঙ্ক দিন
 };
 
 const sitemap = [
@@ -120,7 +120,7 @@ export default function NewFooter({ onSubscribe }) {
   const [subscribeMessage, setSubscribeMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  const company = "Trackvd";
+  const company = "trackvd";
 
   const logoSrc = settings?.logoUrl || logo;
   const address = settings?.address || "";
@@ -129,7 +129,7 @@ export default function NewFooter({ onSubscribe }) {
 
   // Dynamic & Fallback Social Links Setup
   const facebookLink = settings?.facebookUrl || "https://www.facebook.com/trackviobd";
-  const youtubeLink = settings?.youtubeUrl || "https://youtube.com/@trackvio?si=dKygZHVMMgCYkoyQ";
+  const youtubeLink = settings?.youtubeUrl || "https://www.youtube.com/@trackvio?si=dKygZHVMMgCYkoyQ";
   const instagramLink = settings?.instagramUrl;
   const linkedinLink = settings?.linkedinUrl;
   const whatsappLink = "https://wa.me/8801892294141";
@@ -192,7 +192,7 @@ export default function NewFooter({ onSubscribe }) {
   return (
     <footer className="relative w-full overflow-hidden bg-[#07111f] font-sans text-white">
 
-      {/* TRACKVD PREMIUM GPS BACKGROUND */}
+      {/*Trackvio PREMIUM GPS BACKGROUND */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 overflow-hidden"
@@ -318,7 +318,7 @@ export default function NewFooter({ onSubscribe }) {
               </h2>
 
               <p className="mt-5 max-w-lg text-sm leading-8 text-slate-400 sm:text-base">
-                Trackvd-এর GPS ট্র্যাকিং সল্যুশন সম্পর্কে জানুন।
+               Trackvio-এর GPS ট্র্যাকিং সল্যুশন সম্পর্কে জানুন।
                 আপনার গাড়ির জন্য উপযুক্ত ডিভাইস ও প্যাকেজ
                 বেছে নিতে আমাদের টিমের সঙ্গে যোগাযোগ করুন।
               </p>
@@ -354,7 +354,7 @@ export default function NewFooter({ onSubscribe }) {
 
                   <div>
                     <h3 className="text-lg font-bold text-white">
-                      Trackvd Digital Access
+                     Trackvio Digital Access
                     </h3>
                     <p className="mt-1 text-xs text-slate-400">
                       Mobile App & Web Portal
@@ -363,7 +363,7 @@ export default function NewFooter({ onSubscribe }) {
                 </div>
 
                 <p className="mb-6 text-sm leading-7 text-slate-400">
-                  Trackvd-এর অ্যাপ ও ওয়েব পোর্টাল থেকে
+                 Trackvio-এর অ্যাপ ও ওয়েব পোর্টাল থেকে
                   আপনার গাড়ির ট্র্যাকিং সুবিধা ব্যবহার করুন।
                 </p>
 
@@ -394,7 +394,7 @@ export default function NewFooter({ onSubscribe }) {
 
                 <div className="mt-6 flex items-center gap-2 border-t border-white/10 pt-5 text-xs text-slate-400">
                   <FiCheckCircle className="text-base text-orange-400" />
-                  আপনার Trackvd অ্যাকাউন্ট দিয়ে সেবা ব্যবহার করুন
+                  আপনারTrackvio অ্যাকাউন্ট দিয়ে সেবা ব্যবহার করুন
                 </div>
               </div>
             </div>
@@ -409,11 +409,11 @@ export default function NewFooter({ onSubscribe }) {
 
             {/* Company Information */}
             <div className="lg:col-span-4">
-              <Link to="/" className="inline-block" aria-label="Trackvd Home">
+              <Link to="/" className="inline-block" aria-label="trackvd Home">
                 <div className="inline-flex rounded-xl bg-white px-4 py-3">
                   <img
                     src={logoSrc}
-                    alt="Trackvd Logo"
+                    alt="trackvd Logo"
                     className="h-12 max-w-[170px] object-contain"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
@@ -424,7 +424,7 @@ export default function NewFooter({ onSubscribe }) {
               </Link>
 
               <p className="mt-6 max-w-sm text-sm leading-8 text-slate-400">
-                Trackvd — আপনার গাড়ির জন্য আধুনিক GPS
+               Trackvio — আপনার গাড়ির জন্য আধুনিক GPS
                 ট্র্যাকিং ও ভেহিকেল ম্যানেজমেন্ট সল্যুশন।
               </p>
 
@@ -509,7 +509,7 @@ export default function NewFooter({ onSubscribe }) {
               <FooterHeading>আমাদের সাথে যুক্ত থাকুন</FooterHeading>
 
               <p className="mb-6 max-w-sm text-sm leading-7 text-slate-400">
-                Trackvd-এর নতুন আপডেট, সেবা ও গুরুত্বপূর্ণ
+               Trackvio-এর নতুন আপডেট, সেবা ও গুরুত্বপূর্ণ
                 তথ্য পেতে আমাদের নিউজলেটারে সাবস্ক্রাইব করুন।
               </p>
 
@@ -545,7 +545,7 @@ export default function NewFooter({ onSubscribe }) {
               {/* Social Links */}
               <div className="mt-8">
                 <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">
-                  Follow Trackvd
+                  FollowTrackvio
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3">

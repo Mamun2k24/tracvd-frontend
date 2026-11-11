@@ -39,17 +39,17 @@ const HeroSlider = () => {
         {/* Heading with Orange Bottom Border Accent */}
         <div className="inline-block relative mb-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#333333] leading-relaxed">
-            একসাথে অনেক গাড়ি, সুরক্ষা দিবে trackvio জিপিএস ট্র্যাকার
+            একসাথে অনেক গাড়ি, সুরক্ষা দিবেTrackvio জিপিএস ট্র্যাকার
           </h1>
           <div className="w-24 h-1 bg-[#E85125] mx-auto mt-2 rounded-full"></div>
         </div>
 
         {/* Description Text */}
         <p className="text-gray-700 text-sm sm:text-base leading-relaxed max-w-4xl mx-auto space-y-3 mb-8">
-          trackvio জিপিএস ট্র্যাকার বাংলাদেশের (GPS Tracker in Bangladesh) একটি জনপ্রিয় ও নির্ভরযোগ্য ভেহিকেল ট্র্যাকিং সার্ভিস (VTS) সেবাদাতা প্রতিষ্ঠান। 
+         Trackvio জিপিএস ট্র্যাকার বাংলাদেশের (GPS Tracker in Bangladesh) একটি জনপ্রিয় ও নির্ভরযোগ্য ভেহিকেল ট্র্যাকিং সার্ভিস (VTS) সেবাদাতা প্রতিষ্ঠান। 
           আমাদের অ্যাপ ও ওয়েব পোর্টালের মাধ্যমে যেকোনো গাড়ির বর্তমান অবস্থান, গতি ও গতিবিধি নজরদারি (Vehicle Tracking) করতে পারবেন রিয়েল-টাইমে। 
           ফলে নিশ্চিত হয় গাড়ির সর্বোচ্চ নিরাপত্তা, চুরি প্রতিরোধ করা সম্ভব হয় এবং প্রতিষ্ঠানের একাধিক গাড়ি সহজে পরিচালনা ও মনিটর (Fleet Management) করা যায়। 
-          গাড়ির নিরাপত্তা এখন আপনার হাতে, trackvioর সাথে।
+          গাড়ির নিরাপত্তা এখন আপনার হাতে,Trackvioর সাথে।
         </p>
 
         {/* Action Button */}

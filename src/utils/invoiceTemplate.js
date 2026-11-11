@@ -7,14 +7,14 @@ export function printBrandedInvoice(invoice, options = {}) {
   }
 
   const brand = {
-    name: "trackviobd.com",
+    name: "trackvdbd.com",
     slogan: "Trusted products, great deals and easy shopping",
     address: "Badda Link Road, Dhaka Bangladesh",
     phone: "+8801714457750",
-    email: "trackviobd@gmail.com",
+    email: "trackvdbd@gmail.com",
 
     // তোমার আসল domain হলে এখানে পরিবর্তন করবে
-    website: "https://trackviobd.com",
+    website: "https://trackvdbd.com",
 
     openingHours: "Sat–Thu, 9:00 AM – 10:00 PM",
 
@@ -417,7 +417,7 @@ const getCustomer = () => {
           content="width=device-width, initial-scale=1.0"
         />
 
-        <title>${escapeHtml(invoiceCode)} | trackviobd.com</title>
+        <title>${escapeHtml(invoiceCode)} |Trackviobd.com</title>
 
         <style>
           :root {
@@ -1104,7 +1104,7 @@ const getCustomer = () => {
 
                 <p>
                   This invoice was generated electronically
-                  by trackviobd.com.
+                  byTrackviobd.com.
                 </p>
               </div>
 
@@ -1177,7 +1177,7 @@ const getCustomer = () => {
             <div class="terms">
               <strong>Terms & Conditions:</strong>
               Products can be returned or replaced according to
-              trackviobd.com's return policy. Please keep this invoice
+             Trackviobd.com's return policy. Please keep this invoice
               for return, replacement, warranty and support.
             </div>
 
@@ -1194,7 +1194,7 @@ const getCustomer = () => {
             <footer class="footer">
               <div>
                 <p class="thank-you">
-                  Thank you for shopping with trackviobd.com!
+                  Thank you for shopping withTrackviobd.com!
                 </p>
 
                 <p class="footer-text">

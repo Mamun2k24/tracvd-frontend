@@ -1,6 +1,6 @@
 import React from "react";
 
-// Replace this reference list with Trackvd's verified clients before publishing.
+// Replace this reference list withTrackvio's verified clients before publishing.
 const clients = [
   { name: "Unilever Bangladesh Limited", image: "https://prohori.com/wp-content/uploads/2025/08/client-2.png" },
   { name: "Energypac Power Generation Ltd.", image: "https://prohori.com/wp-content/uploads/2025/08/client-3-1.png" },

@@ -5,7 +5,7 @@ const API_BASE = (
 ).replace(/\/$/, "");
 const DEFAULTS = {
   enabled: true,
-  title: "ফর্মটি পূরণ করে, Trackvd GPS ট্র্যাকারের ডেমো দেখুন!",
+  title: "ফর্মটি পূরণ করে,Trackvio GPS ট্র্যাকারের ডেমো দেখুন!",
   trialImage: "https://prohori.com/wp-content/uploads/2026/05/free-trial.gif",
   creativeImage:
     "https://prohori.com/wp-content/uploads/2026/07/Demo-page-creative.webp",

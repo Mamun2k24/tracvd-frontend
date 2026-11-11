@@ -237,7 +237,7 @@ function ProductDetailsModal({
         >
           <div>
             <p className="text-[11px] font-medium text-white/80">
-              Trackvd GPS Tracking
+              trackvd GPS Tracking
             </p>
 
             <h2 className="mt-1 text-lg font-extrabold sm:text-xl">
@@ -298,7 +298,7 @@ function ProductDetailsModal({
                 "
               >
                 <ShieldCheck size={19} />
-                Trackvd GPS Tracking Package
+                trackvd GPS Tracking Package
               </div>
             </div>
 

@@ -37,7 +37,7 @@ const STATUS_LABELS = {
 };
 const DEFAULT_SETTINGS = {
   enabled: true,
-  title: "ফর্মটি পূরণ করে, Trackvd GPS ট্র্যাকারের ডেমো দেখুন!",
+  title: "ফর্মটি পূরণ করে,Trackvio GPS ট্র্যাকারের ডেমো দেখুন!",
   successMessage: "আপনার ডেমো রিকোয়েস্ট গ্রহণ করা হয়েছে। আমরা যোগাযোগ করব।",
   trialImage: "https://prohori.com/wp-content/uploads/2026/05/free-trial.gif",
   creativeImage:
@@ -201,7 +201,7 @@ export default function DemoRequestsDashboard() {
         <header className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-orange-600">
-              Trackvd GPS • Admin
+             Trackvio GPS • Admin
             </p>
             <h1 className="mt-1 text-2xl font-extrabold">Free Demo Requests</h1>
             <p className="text-sm text-slate-500">

@@ -18,7 +18,7 @@ const FEATURES = [
     },
     {
         title: 'আমার গাড়ির সংখ্যা তো অনেক, প্রতিটি গাড়ির আলাদা আলাদা তথ্য জানা যাবে?',
-        description: 'একাধিক গাড়ির তথ্য এক জায়গা থেকে দেখার জন্য Trackvd-এর ফ্লিট ম্যানেজমেন্ট সলিউশন।',
+        description: 'একাধিক গাড়ির তথ্য এক জায়গা থেকে দেখার জন্য trackvd-এর ফ্লিট ম্যানেজমেন্ট সলিউশন।',
         detail: 'আপনার সব গাড়ির তথ্য একসঙ্গে দেখুন।',
         bullets: ['প্রতিটি গাড়ির আলাদা তথ্য দেখুন', 'এক ড্যাশবোর্ডে পুরো ফ্লিট পর্যবেক্ষণ করুন'],
         image: '2025/08/Fleet-3-300x256.png', caption: 'সব গাড়ির তথ্য এক জায়গায়',
@@ -43,7 +43,7 @@ const FEATURES = [
     {
         title: 'ড্রাইভার মিথ্যা বলছে না তো?',
         description: 'গাড়ির অবস্থান ও যাতায়াতের তথ্য দেখে ড্রাইভারের দেওয়া তথ্য যাচাই করতে পারবেন।',
-        detail: 'Trackvd ট্র্যাকিংয়ে থাকুন নিশ্চিন্ত।',
+        detail: 'trackvd ট্র্যাকিংয়ে থাকুন নিশ্চিন্ত।',
         bullets: ['গাড়ির অবস্থান ও চলাচলের ইতিহাস দেখুন', 'রুট ও থামার তথ্য যাচাই করুন'],
         image: '2025/08/Fleet-6.png', caption: 'কোথায় আছে গাড়ি? গতিবিধি কী ছিল?',
         background: 'bg-[#ffecd6]', button: 'bg-purple-600 hover:bg-purple-700', captionColor: 'text-purple-700'
@@ -51,7 +51,7 @@ const FEATURES = [
     {
         title: 'খাতায় না লিখেও পূর্ণ হিসাব রাখা সম্ভব?',
         description: 'গাড়ির চলাচল, ট্রিপ ও অন্যান্য গুরুত্বপূর্ণ তথ্য রিপোর্ট আকারে দেখে সহজে হিসাব রাখুন।',
-        detail: 'Trackvd-এর রিপোর্টিং সুবিধায় তথ্য গুছিয়ে রাখুন।',
+        detail: 'trackvd-এর রিপোর্টিং সুবিধায় তথ্য গুছিয়ে রাখুন।',
         bullets: ['ট্রিপ ও চলাচলের রিপোর্ট দেখুন', 'গাড়ির কার্যক্রম বিশ্লেষণ করুন', 'প্রয়োজনীয় তথ্য দ্রুত খুঁজে পান'],
         image: '2025/08/Fleet-7-300x244.png', caption: 'গাড়ির হিসাব দেখুন সহজেই',
         background: 'bg-white', reverse: true, button: 'bg-fuchsia-700 hover:bg-fuchsia-800', captionColor: 'text-fuchsia-700'
@@ -87,13 +87,13 @@ function ContactForm({ onSubmit }) {
     const update = (key, value) => setValues(prev => ({ ...prev, [key]: value }));
     const submit = async (event) => {
         event.preventDefault();
-        if (!onSubmit) { setStatus('ফর্ম পাঠানোর জন্য Trackvd API সংযুক্ত করতে হবে।'); return; }
+        if (!onSubmit) { setStatus('ফর্ম পাঠানোর জন্য trackvd API সংযুক্ত করতে হবে।'); return; }
         try { await onSubmit(values); setStatus('আপনার তথ্য জমা হয়েছে।'); setValues({ name: '', phone: '', vehicle: '' }); }
         catch { setStatus('তথ্য পাঠানো যায়নি। আবার চেষ্টা করুন।'); }
     };
     return <form id="trackvd-contact" onSubmit={submit} className="overflow-hidden rounded-lg bg-white shadow-lg">
         <div className="flex items-center justify-between gap-4 bg-[#ff891f] px-6 py-5 text-white">
-            <h2 className="text-lg font-bold leading-7">Trackvd সম্পর্কে জানতে<br />আমাদের সাথে যোগাযোগ করুন</h2>
+            <h2 className="text-lg font-bold leading-7">trackvd সম্পর্কে জানতে<br />আমাদের সাথে যোগাযোগ করুন</h2>
             <img src={asset('2026/06/Corporate-Support-icon.webp')} alt="Customer support" className="h-16 w-16 object-contain" />
         </div>
         <div className="space-y-4 p-6">
@@ -107,7 +107,7 @@ function ContactForm({ onSubmit }) {
 }
 
 /** Pass onLeadSubmit={async (values) => { ... }} to connect your existing API. */
-export default function TrackvdFleetPage({ onLeadSubmit, phone = '', whatsappUrl = '', extraClients = [] }) {
+export default function trackvdFleetPage({ onLeadSubmit, phone = '', whatsappUrl = '', extraClients = [] }) {
     const [showAll, setShowAll] = useState(false);
     const clients = [...CLIENTS, ...extraClients];
     const visibleClients = showAll ? clients : clients.slice(0, 9);
@@ -117,7 +117,7 @@ export default function TrackvdFleetPage({ onLeadSubmit, phone = '', whatsappUrl
                 <img src={asset('2026/09/prohori-gps-tracker-server-banner-1024x240.webp')} alt="GPS tracking service promotional banner" className="mx-auto mb-10 block w-full max-w-[1024px] object-contain" />
                 <div className="grid items-start gap-10 md:grid-cols-[1.15fr_0.85fr]">
                     <div className="space-y-5 md:pt-5">
-                        <h1 className="text-2xl md:text-3xl font-bold leading-[1.5]">Trackvd-এর সাথে আপনার গাড়ির নিরাপত্তা ও ফ্লিট ম্যানেজমেন্ট আরও সহজ</h1>
+                        <h1 className="text-2xl md:text-3xl font-bold leading-[1.5]">trackvd-এর সাথে আপনার গাড়ির নিরাপত্তা ও ফ্লিট ম্যানেজমেন্ট আরও সহজ</h1>
                         <ul className="list-disc space-y-2 pl-6 text-base leading-7"><li>এক জায়গায় গাড়ির অবস্থান দেখুন</li><li>আপনার ফ্লিট পরিচালনা করুন সহজে</li></ul>
                         <p className="font-bold">Talk To Expert</p>
                         <div className="flex flex-wrap gap-3">

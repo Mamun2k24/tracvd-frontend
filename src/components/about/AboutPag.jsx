@@ -1,6 +1,6 @@
 import React from "react";
 
-// Trackvd About page. Navbar/Footer are provided by the existing MainLayout.
+//Trackvio About page. Navbar/Footer are provided by the existing MainLayout.
 const images = {
   hero: "https://prohori.com/wp-content/uploads/2026/08/Best-GPS-Tracker-for-Cars-in-Bangladesh.webp",
   story: "https://prohori.com/wp-content/uploads/2025/08/About-us-1024x481.jpg",
@@ -35,29 +35,29 @@ export default function AboutPage() {
           </div>
           <div className="mx-auto w-full max-w-[350px]">
             <img src={images.hero} alt="Vehicle GPS tracking illustration" className="max-h-[260px] w-full rounded-lg bg-white/10 object-contain" />
-            <p className="mt-3 border-l-2 border-white/80 pl-3 text-sm font-medium">Trackvd — নিরাপদ যাত্রায় প্রযুক্তির সহযোগী</p>
+            <p className="mt-3 border-l-2 border-white/80 pl-3 text-sm font-medium">trackvd — নিরাপদ যাত্রায় প্রযুক্তির সহযোগী</p>
           </div>
         </div>
         <div className="pointer-events-none absolute bottom-0 left-1/2 h-12 w-[65%] -translate-x-1/2 rounded-t-2xl border border-white/10" />
       </section>
 
-      <Section title="সীমার মাঝে অসীমের খুঁজি..." image={images.story} alt="Trackvd সম্পর্কে পরিচিতিমূলক ছবি" reverse>
-        <p>Trackvd-এর লক্ষ্য আধুনিক GPS ট্র্যাকিং প্রযুক্তির মাধ্যমে যানবাহনের নিরাপত্তা ও ব্যবস্থাপনাকে আরও সহজ করা। ব্যক্তিগত গাড়ি থেকে শুরু করে ব্যবসায়িক বহরের জন্য আমরা ব্যবহারবান্ধব ট্র্যাকিং অভিজ্ঞতা গড়ে তুলতে চাই।</p>
+      <Section title="সীমার মাঝে অসীমের খুঁজি..." image={images.story} alt="trackvd সম্পর্কে পরিচিতিমূলক ছবি" reverse>
+        <p>trackvd-এর লক্ষ্য আধুনিক GPS ট্র্যাকিং প্রযুক্তির মাধ্যমে যানবাহনের নিরাপত্তা ও ব্যবস্থাপনাকে আরও সহজ করা। ব্যক্তিগত গাড়ি থেকে শুরু করে ব্যবসায়িক বহরের জন্য আমরা ব্যবহারবান্ধব ট্র্যাকিং অভিজ্ঞতা গড়ে তুলতে চাই।</p>
         <p className="mt-4">আমাদের কাছে প্রযুক্তি মানে শুধু একটি ডিভাইস নয়; এটি সময়মতো তথ্য পাওয়া, দায়িত্বশীল সিদ্ধান্ত নেওয়া এবং নিশ্চিন্তে এগিয়ে যাওয়ার একটি উপায়।</p>
       </Section>
 
       <Section title="নয় অনুকরণ, নিজ প্রযুক্তিতে গড়ব দেশ" image={images.technology} alt="প্রযুক্তি ও উদ্ভাবনের চিত্র" muted>
-        <p>দেশের বাস্তব প্রয়োজনকে গুরুত্ব দিয়ে Trackvd কাজ করে। গাড়ির অবস্থান পর্যবেক্ষণ, যাত্রাপথের তথ্য এবং বহর ব্যবস্থাপনার মতো বিষয়গুলো সহজভাবে উপস্থাপন করাই আমাদের উদ্দেশ্য।</p>
+        <p>দেশের বাস্তব প্রয়োজনকে গুরুত্ব দিয়েTrackvio কাজ করে। গাড়ির অবস্থান পর্যবেক্ষণ, যাত্রাপথের তথ্য এবং বহর ব্যবস্থাপনার মতো বিষয়গুলো সহজভাবে উপস্থাপন করাই আমাদের উদ্দেশ্য।</p>
         <p className="mt-4">নতুন ধারণা, কার্যকর প্রযুক্তি এবং গ্রাহকের অভিজ্ঞতা—এই তিনটি বিষয়কে সামনে রেখে আমরা আমাদের সেবা উন্নত করতে চাই।</p>
       </Section>
 
       <section className="bg-white px-5 py-16 md:py-24">
         <div className="mx-auto max-w-[850px] text-center">
-          <h2 className="mb-8 text-2xl font-bold text-[#078bba] md:text-3xl">Trackvd সম্পর্কে আরও জানুন</h2>
+          <h2 className="mb-8 text-2xl font-bold text-[#078bba] md:text-3xl">trackvd সম্পর্কে আরও জানুন</h2>
           <div className="flex aspect-video items-center justify-center rounded-xl border border-gray-200 bg-[#f3f5f7] shadow-sm">
             <div className="px-5 text-center">
               <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#ff6c25] text-2xl text-white">▶</div>
-              <p className="text-sm text-gray-600">Trackvd-এর অফিসিয়াল ভিডিও এখানে যুক্ত করুন</p>
+              <p className="text-sm text-gray-600">trackvd-এর অফিসিয়াল ভিডিও এখানে যুক্ত করুন</p>
             </div>
           </div>
           <p className="mt-4 text-sm text-gray-500">ভিডিওর URL দেওয়া হয়নি, তাই অন্য প্রতিষ্ঠানের ভিডিও ব্যবহার করা হয়নি।</p>

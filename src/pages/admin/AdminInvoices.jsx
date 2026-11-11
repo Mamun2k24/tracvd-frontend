@@ -231,7 +231,7 @@ const getCustomerAddress = (invoice) =>
   const printInvoice = (invoice) => {
     printBrandedInvoice(invoice, {
       brand: {
-        name: "trackviobd.com",
+        name: "trackvdbd.com",
 
         slogan:
           "Trusted products, great deals and easy shopping",
@@ -245,7 +245,7 @@ const getCustomerAddress = (invoice) =>
           "Kroykori.shopping@gmail.com",
 
         // তোমার আসল domain এখানে বসাবে
-        website: "https://trackviobd.com",
+        website: "https://trackvdbd.com",
 
         openingHours:
           "Sat–Thu, 9:00 AM – 10:00 PM",
@@ -471,7 +471,7 @@ const getCustomerAddress = (invoice) =>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <h1 className="text-2xl font-bold text-slate-900 md:text-3xl">
-             trackviobd.com Invoices
+             trackvdbd.com Invoices
             </h1>
 
             <p className="mt-1 text-sm text-slate-500">

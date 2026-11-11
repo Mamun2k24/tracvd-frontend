@@ -76,7 +76,7 @@ const questions = [
 
     q: "ইনস্টলেশন ও সার্ভিস চার্জ কত?",
 
-    a: "চার্জ নির্দিষ্ট ডিভাইস ও সার্ভিস প্যাকেজের ওপর নির্ভর করে। বিস্তারিত জানতে Trackvd টিমের সঙ্গে যোগাযোগ করুন।",
+    a: "চার্জ নির্দিষ্ট ডিভাইস ও সার্ভিস প্যাকেজের ওপর নির্ভর করে। বিস্তারিত জানতেTrackvio টিমের সঙ্গে যোগাযোগ করুন।",
 
   },
 
@@ -234,7 +234,7 @@ const featureComparison = [
 
   {
 
-    name: "২৪/৭ কাস্টমার সাপোর্ট ও এসি ট্র্যাকিং",
+    name: "২৪/৭ কাস্টমার সাপোর্ট",
 
     icon: Clock,
 
@@ -260,7 +260,7 @@ function DemoForm() {
 
   const [enabled, setEnabled] = useState(true);
 
-  const [title, setTitle] = useState("ফর্মটি পূরণ করে Trackvd GPS ট্র্যাকারের ডেমো দেখুন!");
+  const [title, setTitle] = useState("ফর্মটি পূরণ করেTrackvio GPS ট্র্যাকারের ডেমো দেখুন!");
 
   const [notice, setNotice] = useState("");
 
@@ -486,7 +486,7 @@ function DemoSection() {
 
           <h2 className="max-w-[490px] text-xl font-semibold leading-relaxed text-gray-900 md:text-2xl">
 
-            Trackvd GPS Tracker কিভাবে কাজ করে তার ডেমো দেখতে ফর্মটি পূরণ করুন
+           Trackvio GPS Tracker কিভাবে কাজ করে তার ডেমো দেখতে ফর্মটি পূরণ করুন
 
           </h2>
 
@@ -494,7 +494,7 @@ function DemoSection() {
 
             src={TRACKING_IMAGE}
 
-            alt="Trackvd GPS live vehicle tracking demonstration"
+            alt="trackvd GPS live vehicle tracking demonstration"
 
             loading="lazy"
 
@@ -552,7 +552,7 @@ function ReviewsSection() {
 
           <h2 className="text-2xl font-semibold text-gray-800 md:text-3xl">
 
-            Trackvd ব্যবহারকারীদের কথা
+           Trackvio ব্যবহারকারীদের কথা
 
           </h2>
 
@@ -1134,7 +1134,7 @@ function PricingVisualHero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-9 px-4 py-12 sm:px-6 md:grid-cols-[.92fr_1.08fr] md:gap-10 md:py-20">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-orange-400/30 bg-orange-400/10 px-3 py-1.5 text-xs font-semibold tracking-wide text-orange-200">
-            <Sparkles size={14} /> TRACKVD GPS TRACKING
+            <Sparkles size={14} />Trackvio GPS TRACKING
           </span>
           <h1 className="mt-5 max-w-xl text-3xl font-extrabold leading-[1.28] tracking-tight sm:text-4xl lg:text-[43px]">
             আপনার গাড়ির নিরাপত্তায় <span className="text-[#ff922b]">স্মার্ট GPS ট্র্যাকিং</span>
@@ -1214,7 +1214,7 @@ export default function PricingPage() {
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-40" style={{ backgroundImage: "radial-gradient(#93aebc 0.65px, transparent 0.65px)", backgroundSize: "24px 24px" }} />
         <div className="relative mx-auto max-w-6xl px-4">
           <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_18px_55px_rgba(28,64,91,.09)]">
-            <img src={BANNER} alt="Trackvd GPS tracking package banner" className="block h-auto w-full rounded-xl object-contain" />
+            <img src={BANNER} alt="trackvd GPS tracking package banner" className="block h-auto w-full rounded-xl object-contain" />
           </div>
           <div className="mt-9 text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-3 py-1.5 text-xs font-semibold text-orange-700"><Sparkles size={14}/> Choose your tracking plan</span>

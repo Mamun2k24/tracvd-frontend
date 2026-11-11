@@ -188,7 +188,7 @@ const FlashSaleDashboard = lazy(
 );
 
 const CorporatePage = lazy(() =>
-  import("../components/tracvd/TrackvdFleetPage")
+  import("../components/tracvd/trackvdFleetPage")
 );
 const ClientsPage = lazy(() =>
   import("../components/tracvd/ClientsPage")
@@ -274,7 +274,7 @@ export const router = createBrowserRouter(
           path: "category/:slug/:subSlug",
           element: loadable(SectionCategoriDetails),
         },
-// Trackvd Public Pages
+// trackvd Public Pages
 
 {
   path: "corporate",

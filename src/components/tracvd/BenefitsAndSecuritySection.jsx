@@ -79,7 +79,7 @@ const BenefitsAndSecuritySection = () => {
                 বাংলাদেশে চুরি হওয়া গাড়ি কীভাবে খুঁজে পাবেন ভাবছেন? মোবাইল অ্যাপ ওপেন করুন এবং গাড়ির ইঞ্জিন বন্ধ করে দিন। লাইভ ট্র্যাকিং ফিচার ব্যবহার করে সঠিক অবস্থান নির্ধারণ করুন এবং কাছের থানায় রিপোর্ট করুন। বিষয়টি এতটাই সহজ, তাই না? হ্যাঁ, এভাবেই আপনি rackvioর ভেহিকেল ট্র্যাকিং সার্ভিস ব্যবহার করে চুরি হওয়া গাড়ি ফিরে পেতে পারেন।
               </p>
               <h3 className="text-base sm:text-lg font-bold text-[#2C3E50] pt-2">
-                trackvio GPS Tracker আপনার গাড়িকে চুরি থেকে সুরক্ষা দেবে!
+               Trackvio GPS Tracker আপনার গাড়িকে চুরি থেকে সুরক্ষা দেবে!
               </h3>
               <ul className="space-y-3 text-sm sm:text-base text-gray-700">
                 <li className="leading-relaxed">
@@ -125,7 +125,7 @@ const BenefitsAndSecuritySection = () => {
                 অনেক ড্রাইভারই আছে, মালিককে না জানিয়ে খালি গাড়িতে অনৈতিকভাবে যাত্রী উঠিয়ে ট্রিপ দেয়।
               </p>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                আপনার সিঙ্গেল টেনশন, trackvioর মাল্টিপল রিলিফ!
+                আপনার সিঙ্গেল টেনশন,Trackvioর মাল্টিপল রিলিফ!
               </p>
               <ul className="space-y-3 text-sm sm:text-base text-gray-700 pt-1">
                 <li className="leading-relaxed">
@@ -174,7 +174,7 @@ const BenefitsAndSecuritySection = () => {
                 ফুয়েল রিফিল করেছেন কিন্তু তেমন একটা ট্রাভেল করেন নি, অথচ ফুয়েল তাড়াতাড়ি শেষ হচ্ছে? অনুমান ছাড়ুন আর tackvio অ্যাপে ট্র্যাক করুন এবং খরচ নিয়ন্ত্রণ করুন।
               </p>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                লুকানো ফুয়েল ব্যবহারের উপর নিয়ন্ত্রণ রাখুন trackvio ট্র্যাকিং সিস্টেমের মাধ্যমে।
+                লুকানো ফুয়েল ব্যবহারের উপর নিয়ন্ত্রণ রাখুনTrackvio ট্র্যাকিং সিস্টেমের মাধ্যমে।
               </p>
               <ul className="space-y-3 text-sm sm:text-base text-gray-700 pt-1">
                 <li className="leading-relaxed">
@@ -217,17 +217,17 @@ const BenefitsAndSecuritySection = () => {
                 সব মাসে সমান খরচ হয় না এটা যেমন স্বাভাবিক, অপরপক্ষে হঠাৎ করে গাড়ির খরচ বেড়ে যাওয়াটাও অস্বাভাবিক! তার মানে সমস্যা আছে।
               </p>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                trackvio ভেহিকেল ট্র্যাকার আপনার অপ্রয়োজনীয় খরচ কমাতে সাহায্য করে।
+               Trackvio ভেহিকেল ট্র্যাকার আপনার অপ্রয়োজনীয় খরচ কমাতে সাহায্য করে।
               </p>
               <ul className="space-y-3 text-sm sm:text-base text-gray-700 pt-1">
                 <li className="leading-relaxed">
-                  <strong className="text-gray-900 font-bold">• মাইলেজ রিপোর্ট:</strong> গাড়ি কোথায় কোনদিন কত কিলোমিটার চলেছে সেই রিপোর্ট প্যাকেজ অনুযায়ী ৬ মাস পর্যন্ত trackvioকে সংরক্ষিত থাকবে।
+                  <strong className="text-gray-900 font-bold">• মাইলেজ রিপোর্ট:</strong> গাড়ি কোথায় কোনদিন কত কিলোমিটার চলেছে সেই রিপোর্ট প্যাকেজ অনুযায়ী ৬ মাস পর্যন্তTrackvioকে সংরক্ষিত থাকবে।
                 </li>
                 <li className="leading-relaxed">
                   <strong className="text-gray-900 font-bold">• ফুয়েল মনিটরিং সিস্টেম:</strong> দেখুন কবে কোথায় কতটুকু তেল খরচ হয়েছে। লুকানো ফুয়েল নষ্ট হওয়া মুহূর্তেই সনাক্ত করুন।
                 </li>
                 <li className="leading-relaxed">
-                  <strong className="text-gray-900 font-bold">• ডেইলি সামারি:</strong> সারাদিনে গাড়ি কোথায় কতটুকু কোন পথে ভ্রমণ করেছে, কতটুকু তেল খরচ হয়েছে, কতবার ইঞ্জিন অন/অফ করা হয়েছে, এসি কতক্ষণ অন ছিল, এমনকি কোন দরজা কতবার খোলা হয়েছে দিন শেষে SMS-এর মাধ্যমে Automatic জানিয়ে দিবে trackvio!
+                  <strong className="text-gray-900 font-bold">• ডেইলি সামারি:</strong> সারাদিনে গাড়ি কোথায় কতটুকু কোন পথে ভ্রমণ করেছে, কতটুকু তেল খরচ হয়েছে, কতবার ইঞ্জিন অন/অফ করা হয়েছে, এসি কতক্ষণ অন ছিল, এমনকি কোন দরজা কতবার খোলা হয়েছে দিন শেষে SMS-এর মাধ্যমে Automatic জানিয়ে দিবেTrackvio!
                 </li>
               </ul>
               <div className="pt-4">
@@ -263,7 +263,7 @@ const BenefitsAndSecuritySection = () => {
                 আপনি অফিসে ব্যস্ত আছেন। তাই ড্রাইভারের সাথে হয়তো বাচ্চাকে স্কুলে পাঠিয়েছেন। কিন্তু নিশ্চিত হতে পারছেন না বা অথবা দুশ্চিন্তায় ভুগছেন।
               </p>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                trackvio Vehicle Tracker ব্যবহার করে গাড়ির অবস্থা মুহূর্তেই জানুন এবং চিন্তা মুক্ত থাকুন।
+               Trackvio Vehicle Tracker ব্যবহার করে গাড়ির অবস্থা মুহূর্তেই জানুন এবং চিন্তা মুক্ত থাকুন।
               </p>
               <ul className="space-y-3 text-sm sm:text-base text-gray-700 pt-1">
                 <li className="leading-relaxed">
@@ -306,7 +306,7 @@ const BenefitsAndSecuritySection = () => {
                 অতিরিক্ত গতিবেগ জীবনহানির পাশাপাশি অর্থের ক্ষতিরও কারণ হতে পারে এবং বাংলাদেশে স্পিডিং ভায়োলেশন বা গতিসীমা অতিক্রম করার জন্য সরাসরি জরিমানা হতে পারে।
               </p>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                trackvio ভেহিকেল ট্র্যাকিং সিস্টেম (VTS) ব্যবহার করে আপনি সবসময় গাড়ি নিয়ন্ত্রণে রাখতে পারেন।
+               Trackvio ভেহিকেল ট্র্যাকিং সিস্টেম (VTS) ব্যবহার করে আপনি সবসময় গাড়ি নিয়ন্ত্রণে রাখতে পারেন।
               </p>
               <ul className="space-y-3 text-sm sm:text-base text-gray-700 pt-1">
                 <li className="leading-relaxed">
@@ -346,7 +346,7 @@ const BenefitsAndSecuritySection = () => {
                 আপনি সাধারণত যে রুট ব্যবহার করেন, গাড়িতে না থাকলে ড্রাইভার সেই রুট ব্যবহার নাও করতে পারে। তার ব্যক্তিগত প্রয়োজনে গাড়ি ভিন্ন রুটে যাচ্ছে না তো!
               </p>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                ট্রাভেল হিস্ট্রি দেখাবে trackvio ট্র্যাকার
+                ট্রাভেল হিস্ট্রি দেখাবেTrackvio ট্র্যাকার
               </p>
               <ul className="space-y-3 text-sm sm:text-base text-gray-700 pt-1">
                 <li className="leading-relaxed">
@@ -389,7 +389,7 @@ const BenefitsAndSecuritySection = () => {
                 দুর্ঘটনা বা হঠাৎ ঝুঁকি কখনোই অপ্রত্যাশিত নয়। হাইজ্যাকিং, দুর্ঘটনা বা মেডিক্যাল ইমার্জেন্সিতে আমাদের ট্র্যাকিং সিস্টেম দ্রুত সাহায্য নিশ্চিত করে।
               </p>
               <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                trackvio ভেহিকেল সিকিউরিটি ডিভাইস দিয়ে দ্রুত তথ্য পাঠান পরিবারের সদস্যদের কাছে।
+               Trackvio ভেহিকেল সিকিউরিটি ডিভাইস দিয়ে দ্রুত তথ্য পাঠান পরিবারের সদস্যদের কাছে।
               </p>
               <ul className="space-y-3 text-sm sm:text-base text-gray-700 pt-1">
                 <li className="leading-relaxed">

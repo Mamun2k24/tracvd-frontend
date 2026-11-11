@@ -353,7 +353,7 @@ const Signup = () => {
           <div className="w-full max-w-[420px] mx-auto space-y-6">
             <div className="space-y-1.5 text-center lg:text-left">
               <span className="inline-flex mb-2 rounded-full bg-orange-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.16em] text-orange-600">
-                Trackvio
+               Trackvio
               </span>
               <h3 className="text-3xl font-black tracking-tight text-slate-900">
                 Welcome Back!

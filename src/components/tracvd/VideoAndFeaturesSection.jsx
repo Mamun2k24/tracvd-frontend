@@ -190,7 +190,7 @@ const VideoAndFeaturesSection = () => {
             <iframe
               className="h-full w-full"
               src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=0&rel=0`}
-              title="Trackvd GPS Tracker"
+              title="trackvd GPS Tracker"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
@@ -200,13 +200,13 @@ const VideoAndFeaturesSection = () => {
 
           {/* Title */}
           <h2 className="mb-4 text-xl font-bold leading-snug text-[#E5A823] sm:text-2xl md:text-3xl">
-            Trackvd GPS Tracker টেনশনলেস জীবন দিচ্ছে,
+            trackvd GPS Tracker টেনশনলেস জীবন দিচ্ছে,
             দায়বদ্ধতা নিচ্ছে...
           </h2>
 
           {/* Description */}
           <p className="mx-auto max-w-3xl text-xs leading-relaxed text-gray-300 sm:text-sm md:text-base">
-            Trackvd-এর GPS ট্র্যাকিং সল্যুশনের মাধ্যমে
+            trackvd-এর GPS ট্র্যাকিং সল্যুশনের মাধ্যমে
             আপনার গাড়ির অবস্থান পর্যবেক্ষণ ও ভেহিকেল
             ম্যানেজমেন্ট আরও সহজ করুন। আপনার প্রয়োজন
             অনুযায়ী ট্র্যাকিং ডিভাইস ও সেবা সম্পর্কে
@@ -239,7 +239,7 @@ const VideoAndFeaturesSection = () => {
               <h3 className="text-base font-bold leading-snug sm:text-lg">
                 সম্পূর্ণ দেশীয় প্রযুক্তিতে
                 <br />
-                তৈরি অন্যরকম Trackvd
+                তৈরি অন্যরকম trackvd
               </h3>
 
             </div>

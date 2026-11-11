@@ -79,7 +79,7 @@
 //             >
 //               <img
 //                 src={logo}
-//                 alt="Trackvd Logo"
+//                 alt="trackvd Logo"
 //                 className="h-12 w-auto object-contain"
 //               />
 //             </Link>
@@ -150,7 +150,7 @@
 //             >
 //               <img
 //                 src={logo}
-//                 alt="Trackvd Logo"
+//                 alt="trackvd Logo"
 //                 className="h-9 w-auto object-contain"
 //               />
 //             </Link>
@@ -382,11 +382,11 @@ const Navigation = () => {
               to="/"
               onClick={closeMenu}
               className="group relative flex shrink-0 items-center"
-              aria-label="Trackvd Home"
+              aria-label="trackvd Home"
             >
               <img
                 src={logo}
-                alt="Trackvd Logo"
+                alt="trackvd Logo"
                 className="h-11 w-auto max-w-[150px] object-contain transition-transform duration-300 group-hover:scale-[1.04] lg:h-12"
               />
             </Link>
@@ -517,7 +517,7 @@ const Navigation = () => {
               {/* Mobile Call */}
               <a
                 href={`tel:${PHONE}`}
-                aria-label="Call Trackvd"
+                aria-label="CallTrackvio"
                 className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 text-[#f26522] transition hover:bg-orange-100"
               >
                 <PhoneCall size={19} />
@@ -566,11 +566,11 @@ const Navigation = () => {
                 <Link
                   to="/"
                   onClick={closeMenu}
-                  aria-label="Trackvd Home"
+                  aria-label="trackvd Home"
                 >
                   <img
                     src={logo}
-                    alt="Trackvd Logo"
+                    alt="trackvd Logo"
                     className="h-11 w-auto max-w-[150px] object-contain"
                   />
                 </Link>
@@ -593,7 +593,7 @@ const Navigation = () => {
 
                 <div>
                   <p className="text-sm font-bold text-slate-800">
-                    Trackvd
+                   Trackvio
                   </p>
 
                   <p className="text-[11px] text-slate-500">
@@ -606,7 +606,7 @@ const Navigation = () => {
             {/* Drawer Scrollable Content */}
             <div className="flex-1 overflow-y-auto px-5 py-6">
               <p className="mb-4 px-2 text-[11px] font-bold uppercase tracking-[0.18em] text-slate-400">
-                Explore Trackvd
+                ExploreTrackvio
               </p>
 
               <nav aria-label="Mobile navigation">
@@ -680,7 +680,7 @@ const Navigation = () => {
                 </div>
 
                 <p className="mb-4 text-xs leading-6 text-slate-600">
-                  Trackvd GPS Tracking System সম্পর্কে
+                 Trackvio GPS Tracking System সম্পর্কে
                   বিস্তারিত জানতে ডেমো দেখুন।
                 </p>
 
@@ -723,7 +723,7 @@ const Navigation = () => {
 
               <div className="mt-4 flex items-center justify-between">
                 <p className="text-xs text-slate-400">
-                  © {new Date().getFullYear()} Trackvd
+                  © {new Date().getFullYear()}Trackvio
                 </p>
 
                 <button
