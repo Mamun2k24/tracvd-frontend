@@ -114,7 +114,7 @@ export default function trackvdFleetPage({ onLeadSubmit, phone = '', whatsappUrl
     return <main className="font-sans text-slate-800">
         <section className="bg-[#e7e7e7]">
             <div className="mx-auto max-w-6xl px-5 pt-7 pb-16 md:pb-24">
-                <img src={asset('2026/09/prohori-gps-tracker-server-banner-1024x240.webp')} alt="GPS tracking service promotional banner" className="mx-auto mb-10 block w-full max-w-[1024px] object-contain" />
+                <img src="https://i.ibb.co.com/1Gghbn4x/tracview-b1.jpg" alt="GPS tracking service promotional banner" className="mx-auto mb-10 block w-full max-w-[1024px] object-contain" />
                 <div className="grid items-start gap-10 md:grid-cols-[1.15fr_0.85fr]">
                     <div className="space-y-5 md:pt-5">
                         <h1 className="text-2xl md:text-3xl font-bold leading-[1.5]">trackvd-এর সাথে আপনার গাড়ির নিরাপত্তা ও ফ্লিট ম্যানেজমেন্ট আরও সহজ</h1>

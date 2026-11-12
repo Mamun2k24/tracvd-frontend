@@ -194,7 +194,8 @@ export default function DemoPage() {
         </section>
         <aside className="flex items-center justify-center overflow-hidden rounded-[9px] bg-[#f5f5f5] p-3 shadow-[0_2px_10px_rgba(0,0,0,0.16)]">
           <img
-            src={settings.creativeImage}
+            // src={settings.creativeImage}
+            src="https://i.ibb.co.com/JjnjZtHK/gift.jpg"
             alt="GPS tracking demo promotional illustration"
             className="h-full max-h-[510px] w-full object-contain"
             loading="eager"
