@@ -7,6 +7,7 @@ const CLIENTS = [
     '2025/08/client-11.png', '2025/08/client-4.png', '2025/08/client-7.png',
     '2025/08/Pandora-1.png', '2025/08/Horizon-Group-1.png', '2026/06/akij-group-logo.png'
 ];
+
 const FEATURES = [
     {
         title: 'গাড়ি কোথায় আছে জানতে পারবেন?',

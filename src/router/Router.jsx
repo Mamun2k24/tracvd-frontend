@@ -188,7 +188,7 @@ const FlashSaleDashboard = lazy(
 );
 
 const CorporatePage = lazy(() =>
-  import("../components/tracvd/trackvdFleetPage")
+  import("../components/tracvd/TrackvdFleetPage")
 );
 const ClientsPage = lazy(() =>
   import("../components/tracvd/ClientsPage")
