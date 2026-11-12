@@ -9,7 +9,7 @@ import PopularProduct from "./sections/popularProducts/PopularProducts";
 import FeaturesBanner from "../../components/ui/FeaturesBanner";
 import BenefitsAndSecuritySection from "../../components/tracvd/BenefitsAndSecuritySection";
 import VideoAndFeaturesSection from "../../components/tracvd/VideoAndFeaturesSection";
-import trackvdSections from "../../components/tracvd/trackvdSections";
+import trackvdSections from "../../components/tracvd/TrackvdSections";
 
 // Lazy Components
 const OurBrands = lazy(() => import("../../components/OurBrands"));

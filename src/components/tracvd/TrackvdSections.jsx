@@ -29,7 +29,7 @@ function ReviewCard({ review }) {
   </article>;
 }
 
-export default function trackvdSections() {
+export default function TrackvdSections() {
   const [reviewStart, setReviewStart] = useState(0);
   const [showAll, setShowAll] = useState(false);
   const visibleReviews = [0, 1, 2].map(i => initialReviews[(reviewStart + i) % initialReviews.length]);
