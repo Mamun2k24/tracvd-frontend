@@ -41,7 +41,7 @@ const DEFAULT_SETTINGS = {
   successMessage: "আপনার ডেমো রিকোয়েস্ট গ্রহণ করা হয়েছে। আমরা যোগাযোগ করব।",
   trialImage: "https://prohori.com/wp-content/uploads/2026/05/free-trial.gif",
   creativeImage:
-    "https://prohori.com/wp-content/uploads/2026/07/Demo-page-creative.webp",
+    "https://i.ibb.co.com/JjnjZtHK/gift.jpg",
   vehicleTypes: [
     "প্রাইভেট কার",
     "মোটরসাইকেল",

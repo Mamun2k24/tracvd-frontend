@@ -8,7 +8,7 @@ const DEFAULTS = {
   title: "ফর্মটি পূরণ করে,Trackvio GPS ট্র্যাকারের ডেমো দেখুন!",
   trialImage: "https://prohori.com/wp-content/uploads/2026/05/free-trial.gif",
   creativeImage:
-    "https://prohori.com/wp-content/uploads/2026/07/Demo-page-creative.webp",
+    "https://i.ibb.co.com/JjnjZtHK/gift.jpg",
   vehicleTypes: [
     "প্রাইভেট কার",
     "মোটরসাইকেল",

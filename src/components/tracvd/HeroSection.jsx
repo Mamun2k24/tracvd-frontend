@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // --- Assets & Data Constants ---
-const BANNER_IMG = "https://prohori.com/wp-content/uploads/2026/09/prohori-gps-tracker-server-banner-1024x240.webp";
+const BANNER_IMG = "https://i.ibb.co.com/1Gghbn4x/tracview-b1.jpg";
 const CALL_CENTER_IMG = "https://prohori.com/wp-content/uploads/2026/06/Corporate-Support-icon.webp";
 
 const CLIENT_LOGOS = [
