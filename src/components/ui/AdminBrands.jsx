@@ -119,7 +119,7 @@ const AdminBrands = () => {
         <div className="mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight text-gray-800">
-              Brands
+              Clints
             </h2>
             <p className="text-sm text-gray-500">
               Manage homepage brands & partners from here.

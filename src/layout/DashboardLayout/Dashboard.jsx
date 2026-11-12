@@ -172,7 +172,7 @@ export default function Dashboard() {
           },
 
           { to: "/dashboard/color", icon: <FiDroplet />, label: "Colors" },
-          { to: "/dashboard/brands", icon: <FiBookmark />, label: "Brands" },
+          { to: "/dashboard/brands", icon: <FiBookmark />, label: "Clints" },
           {
             to: "/dashboard/stock-management",
             label: "Stock Management",
