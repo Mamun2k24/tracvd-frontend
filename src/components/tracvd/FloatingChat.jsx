@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { MessageCircle, X, Send } from "lucide-react";
 import { FaWhatsapp, FaFacebookMessenger } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "01892294141";
+const WHATSAPP_NUMBER = "+8801892294141";
 
 // তোমার Facebook Page username অথবা Page ID বসাও।
 const MESSENGER_USERNAME = "trackviobd";
