@@ -191,7 +191,8 @@ export default function Dashboard() {
             icon: <FiUsers />,
             label: isSuperAdmin ? "Users & Admins" : "Users",
           },
-          { to: "/dashboard/review", icon: <FiStar />, label: "Reviews" },
+          // { to: "/dashboard/review", icon: <FiStar />, label: "Reviews" },
+           { to: "/dashboard/site-reviews", icon: <FiStar />, label: "Website Testimonials" },
         ],
       },
       

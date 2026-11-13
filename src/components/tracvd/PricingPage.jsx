@@ -43,6 +43,7 @@ import {
 } from "lucide-react";
 
 import PopularProduct from "../../pages/home/sections/popularProducts/PopularProducts";
+import ReviewSection from "./ReviewSection";
 
 const BANNER =
 
@@ -90,61 +91,7 @@ const questions = [
 
 ];
 
-// গুগল রিভিউ ডাটা
 
-const reviewsData = [
-
-  {
-
-    id: 1,
-
-    name: "Rj rock yt",
-
-    time: "7 months ago",
-
-    rating: 5,
-
-    comment: "good",
-
-    avatar: "https://lh3.googleusercontent.com/a/default-user=s96-c",
-
-  },
-
-  {
-
-    id: 2,
-
-    name: "Momenur Rahman",
-
-    time: "1 year ago",
-
-    rating: 5,
-
-    comment:
-
-      "I think this is the best tracker in Our country. 15 months I use this tracker...",
-
-    avatar: "https://lh3.googleusercontent.com/a/default-user=s96-c",
-
-  },
-
-  {
-
-    id: 3,
-
-    name: "Dr Md Ali Mazrui ...",
-
-    time: "1 year ago",
-
-    rating: 5,
-
-    comment: "Very Good Service.",
-
-    avatar: "https://lh3.googleusercontent.com/a/default-user=s96-c",
-
-  },
-
-];
 
 const featureComparison = [
 
@@ -537,248 +484,8 @@ function DemoSection() {
 }
 
 // ----------------- REVIEWS SECTION (NEW) -----------------
+<ReviewSection />
 
-function ReviewsSection() {
-
-  return (
-
-    <section className="bg-[#e9e9e9] py-10 md:py-12">
-
-      <div className="mx-auto max-w-6xl px-4">
-
-        {/* Title */}
-
-        <div className="text-center">
-
-          <h2 className="text-2xl font-semibold text-gray-800 md:text-3xl">
-
-           Trackvio ব্যবহারকারীদের কথা
-
-          </h2>
-
-          <div className="mx-auto mt-3 h-0.5 w-12 bg-gray-400" />
-
-        </div>
-
-        {/* Content Box */}
-
-        <div className="mt-2 flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch">
-
-          {/* Left Google Badge */}
-
-          <div className="flex flex-col items-center justify-center p-4 text-center">
-
-            <span className="text-xl font-extrabold tracking-wide text-gray-900">
-
-              GOOD
-
-            </span>
-
-            {/* Stars */}
-
-            <div className="mt-2 flex items-center gap-1">
-
-              {[...Array(4)].map((_, i) => (
-
-                <Star
-
-                  key={i}
-
-                  className="h-6 w-6 fill-[#ffb400] text-[#ffb400]"
-
-                />
-
-              ))}
-
-              <Star className="h-6 w-6 fill-gray-300 text-gray-300" />
-
-            </div>
-
-            <p className="mt-2 text-xs font-semibold text-gray-700">
-
-              Based on <span className="font-bold">70 reviews</span>
-
-            </p>
-
-            {/* Google Logo */}
-
-            <div className="mt-1 flex items-center gap-1 text-2xl font-bold tracking-tighter">
-
-              <span className="text-[#4285F4]">G</span>
-
-              <span className="text-[#EA4335]">o</span>
-
-              <span className="text-[#FBBC05]">o</span>
-
-              <span className="text-[#4285F4]">g</span>
-
-              <span className="text-[#34A853]">l</span>
-
-              <span className="text-[#EA4335]">e</span>
-
-            </div>
-
-          </div>
-
-          {/* Right Cards Slider Wrapper */}
-
-          <div className="relative flex w-full flex-1 items-center gap-3 overflow-hidden">
-
-            {/* Left Slider Arrow */}
-
-            <button
-
-              type="button"
-
-              className="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white shadow-md text-gray-600 hover:text-gray-900"
-
-            >
-
-              <ChevronLeft size={18} />
-
-            </button>
-
-            {/* Cards Grid / Carousel */}
-
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-
-              {reviewsData.map((item) => (
-
-                <div
-
-                  key={item.id}
-
-                  className="flex flex-col justify-between rounded-xl bg-white p-5 shadow-sm transition hover:shadow-md"
-
-                >
-
-                  <div>
-
-                    {/* Header: User Info & Google Icon */}
-
-                    <div className="flex items-start justify-between gap-2">
-
-                      <div className="flex items-center gap-3">
-
-                        <div className="h-10 w-10 overflow-hidden rounded-full bg-gray-200">
-
-                          <img
-
-                            src={item.avatar}
-
-                            alt={item.name}
-
-                            className="h-full w-full object-cover"
-
-                          />
-
-                        </div>
-
-                        <div>
-
-                          <h4 className="text-sm font-bold text-gray-900">
-
-                            {item.name}
-
-                          </h4>
-
-                          <p className="text-xs text-gray-500">{item.time}</p>
-
-                        </div>
-
-                      </div>
-
-                      {/* Google G icon */}
-
-                      <span className="text-base font-bold text-[#4285F4]">
-
-                        G
-
-                      </span>
-
-                    </div>
-
-                    {/* Stars + Verified Icon */}
-
-                    <div className="mt-3 flex items-center gap-1">
-
-                      {[...Array(item.rating)].map((_, i) => (
-
-                        <Star
-
-                          key={i}
-
-                          className="h-4 w-4 fill-[#ffb400] text-[#ffb400]"
-
-                        />
-
-                      ))}
-
-                      <span className="ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#4285F4] text-[10px] text-white font-bold">
-
-                        ✓
-
-                      </span>
-
-                    </div>
-
-                    {/* Comment */}
-
-                    <p className="mt-3 text-xs leading-relaxed text-gray-700">
-
-                      {item.comment}
-
-                    </p>
-
-                  </div>
-
-                  {item.comment.length > 50 && (
-
-                    <button
-
-                      type="button"
-
-                      className="mt-3 text-left text-xs font-medium text-gray-500 hover:underline"
-
-                    >
-
-                      Read more
-
-                    </button>
-
-                  )}
-
-                </div>
-
-              ))}
-
-            </div>
-
-            {/* Right Slider Arrow */}
-
-            <button
-
-              type="button"
-
-              className="z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white shadow-md text-gray-600 hover:text-gray-900"
-
-            >
-
-              <ChevronRight size={18} />
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  );
-
-}
 
 function ComparisonSection() {
 
@@ -1225,7 +932,7 @@ export default function PricingPage() {
         </div>
       </section>
       <DemoSection />
-      <ReviewsSection />
+      <ReviewSection />
       <ComparisonSection />
       <FAQSection />
     </main>

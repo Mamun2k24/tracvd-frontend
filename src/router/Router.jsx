@@ -134,6 +134,7 @@ const ConfirmOrders = lazy(() => import("../components/ui/ConfirmOrders"));
 const CancelOrders = lazy(() => import("../components/ui/CancelOrders"));
 const DeliveredOrders = lazy(() => import("../components/ui/DeliveredOrders"));
 const SalesReport = lazy(() => import("../components/ui/SalesReport"));
+const SiteReviewsDashboard = lazy(() => import("../components/tracvd/SiteReviewsDashboard"));
 const HeaderSectionSettings = lazy(
   () => import("../components/ui/HeaderSectionSettings"),
 );
@@ -153,6 +154,7 @@ const AdminSellerProducts = lazy(
 const AdminSellerOrders = lazy(
   () => import("../pages/admin/order/AdminSellerOrders"),
 );
+
 const AdminSellerPayouts = lazy(
   () => import("../pages/admin/finance/AdminSellerPayouts"),
 );
@@ -180,6 +182,7 @@ const GeneralSetting = lazy(() => import("../components/ui/GeneralSetting"));
 const ForgotPassword = lazy(() => import("../pages/ForgotPassword"));
 const OrderSuccess = lazy(() => import("../pages/OrderSuccess"));
 const AboutPage = lazy(() => import("../components/about/AboutPag"));
+
 const KroyKoriContactPage = lazy(
   () => import("../components/contact/KroyKoriContactPage"),
 );
@@ -331,6 +334,7 @@ export const router = createBrowserRouter(
         },
 
         // ---- ADMIN ONLY ----
+        { path: "site-reviews", element: <AdminRoute>{loadable(SiteReviewsDashboard)}</AdminRoute> },
         {
           path: "demo-requests",
           element: <AdminRoute>{loadable(DemoRequestsDashboard)}</AdminRoute>,
