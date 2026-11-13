@@ -106,11 +106,11 @@
 
 //             {/* Phone Number */}
 //             <a
-//               href="tel:01700786848"
+//               href="tel:01892294141"
 //               className="flex items-center gap-2 text-base font-semibold text-gray-800 transition-colors hover:text-[#E85125]"
 //             >
 //               <Users className="h-5 w-5 text-gray-700" />
-//               <span>01700786848</span>
+//               <span>01892294141</span>
 //             </a>
 
 //             {/* Language Button */}
@@ -187,11 +187,11 @@
 //               {/* Mobile Phone */}
 //               <li className="py-4">
 //                 <a
-//                   href="tel:01700786848"
+//                   href="tel:01892294141"
 //                   className="flex items-center gap-3 text-lg font-semibold text-gray-800"
 //                 >
 //                   <Users className="h-5 w-5" />
-//                   <span>01700786848</span>
+//                   <span>01892294141</span>
 //                 </a>
 //               </li>
 
@@ -241,7 +241,7 @@ import {
 
 import logo from "../../assets/images/logo.png";
 
-const PHONE = "01700786848";
+const PHONE = "01892294141";
 
 const navLinks = [
   {

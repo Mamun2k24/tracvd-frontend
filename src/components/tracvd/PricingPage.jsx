@@ -53,7 +53,7 @@ const TRACKING_IMAGE =
 
   "https://i.ibb.co.com/xtxVs1gk/hero.png";
 
-const PHONE = "01700786848";
+const PHONE = "01892294141";
 
 const questions = [
 

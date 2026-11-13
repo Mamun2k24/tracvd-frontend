@@ -6,6 +6,7 @@ import Navigation from "../components/navigation/Navigation";
 import ScrollToTop from "../context/ScrollToTop";
 import BottomMobileNav from "../components/navigation/BottomMobileNav";
 import Snowfall from "../components/Snowfall"; // 👈 ১. Snowfall কম্পোনেন্টটি ইমপোর্ট করুন
+import FloatingChat from "../components/tracvd/FloatingChat";
 // import ChatboxWidget from "../components/chatbox/ChatboxWidget";
 
 const MainLayout = () => {
@@ -17,6 +18,7 @@ const MainLayout = () => {
       <Outlet />
       {/* <BottomMobileNav /> */}
       <NewFooter />
+       <FloatingChat />
 
 
     </div>
