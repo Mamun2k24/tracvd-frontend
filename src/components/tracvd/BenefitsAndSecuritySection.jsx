@@ -31,7 +31,7 @@ const BenefitsAndSecuritySection = () => {
       <section className="w-full bg-white py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#2C3E50] mb-3">
-            Benefits of Using Tracvd Vehicle Tracking System
+            Benefits of Using Trackvio Vehicle Tracking System
           </h2>
           <div className="w-16 h-[2px] bg-gray-300 mx-auto mb-10 md:mb-12"></div>
 
