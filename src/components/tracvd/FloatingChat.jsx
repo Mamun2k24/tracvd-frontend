@@ -36,7 +36,7 @@ export default function FloatingChat() {
             <div className="flex items-center gap-2">
               <MessageCircle size={19} />
               <h3 className="text-sm font-bold">
-                Trackvd Support
+                Trackvio Support
               </h3>
             </div>
             <p className="mt-1 text-xs text-blue-100">

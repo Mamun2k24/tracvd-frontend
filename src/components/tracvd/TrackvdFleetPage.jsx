@@ -129,14 +129,7 @@ export default function trackvdFleetPage({ onLeadSubmit, phone = '', whatsappUrl
                     </div>
                     <ContactForm onSubmit={onLeadSubmit} />
                 </div>
-                <div className="pt-20 text-center">
-                    <h2 className="text-xl md:text-2xl font-semibold text-slate-600">আমাদের কর্পোরেট ক্লায়েন্টসমূহ</h2>
-                    <div className="mx-auto mt-4 h-px w-24 bg-slate-400" />
-                    <div className="mx-auto mt-9 grid max-w-5xl grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-6 md:gap-3">
-                        {visibleClients.map((img, index) => <div key={`${img}-${index}`} className="flex aspect-square items-center justify-center border border-slate-200 bg-white p-4 shadow-sm"><img loading="lazy" src={img.startsWith('http') ? img : asset(img)} alt={`Client logo ${index + 1}`} className="max-h-full max-w-full object-contain" /></div>)}
-                    </div>
-                    {clients.length > 9 && <button type="button" onClick={() => setShowAll(v => !v)} className="mt-8 rounded-full bg-[#ff891f] px-7 py-3 text-sm font-semibold text-white hover:bg-orange-600">{showAll ? 'কম দেখুন' : 'More Clients'}</button>}
-                </div>
+          
             </div>
         </section>
         {FEATURES.map((item, index) => <FeatureSection key={item.title} item={item} index={index} />)}
