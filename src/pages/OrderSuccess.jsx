@@ -343,7 +343,7 @@ const OrderSuccess = () => {
           <p>Need Help? Our customer service team is 24/7 available.</p>
           <div className="flex items-center gap-2">
             <a 
-              href="https://wa.me/8801635129195" 
+              href="https://wa.me/8801892294141" 
               target="_blank" 
               rel="noreferrer" 
               className="inline-flex items-center gap-1 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 px-3 py-2 rounded-xl transition"
@@ -351,7 +351,7 @@ const OrderSuccess = () => {
               <MessageSquare className="w-3.5 h-3.5" /> Chat on WhatsApp
             </a>
             <a 
-              href="tel:+8801635129195" 
+              href="tel:+8801892294141" 
               className="inline-flex items-center gap-1 bg-slate-100 text-slate-700 hover:bg-slate-200 px-3 py-2 rounded-xl transition"
             >
               <PhoneCall className="w-3.5 h-3.5" /> +880 01714457750

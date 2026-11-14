@@ -173,15 +173,15 @@ const OrderSummaryPanel = ({
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          <a href="tel:01635129195" className="flex items-center gap-2.5 bg-slate-50 border border-slate-100 p-3 rounded-xl hover:bg-indigo-50/30 transition-colors group">
+          <a href="tel:01892294141" className="flex items-center gap-2.5 bg-slate-50 border border-slate-100 p-3 rounded-xl hover:bg-indigo-50/30 transition-colors group">
             <PhoneCall className="w-4 h-4 text-indigo-600 group-hover:scale-110 transition-transform" />
             <div>
-              <p className="text-[10px] text-slate-400 font-medium">01635-129195</p>
+              <p className="text-[10px] text-slate-400 font-medium">01892294141</p>
               <p className="text-[11px] font-bold text-slate-700">Call Us</p>
             </div>
           </a>
 
-          <a href="https://wa.me/8801635129195" target="_blank" rel="noreferrer" className="flex items-center gap-2.5 bg-slate-50 border border-slate-100 p-3 rounded-xl hover:bg-emerald-50/30 transition-colors group">
+          <a href="https://wa.me/8801892294141" target="_blank" rel="noreferrer" className="flex items-center gap-2.5 bg-slate-50 border border-slate-100 p-3 rounded-xl hover:bg-emerald-50/30 transition-colors group">
             <MessageSquare className="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform" />
             <div>
               <p className="text-[10px] text-slate-400 font-medium">WhatsApp</p>

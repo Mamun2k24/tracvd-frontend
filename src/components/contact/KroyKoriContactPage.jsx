@@ -5,13 +5,13 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    value: "01635-129195",
+    value: "01892294141",
     text: "Sat - Thu, 10:00 AM - 7:00 PM",
   },
   {
     icon: Mail,
     title: "Email Us",
-    value: "support@Kroykori.com",
+    value: "info@trackviobd.com",
     text: "We reply as soon as possible",
   },
   {

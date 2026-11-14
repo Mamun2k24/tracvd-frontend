@@ -222,7 +222,7 @@ const AdminShippingSettings = () => {
   </div>
 
   {/* Free Shipping */}
-  <div
+  {/* <div
     className="
     mt-6
     bg-white
@@ -282,7 +282,7 @@ const AdminShippingSettings = () => {
     <div className="mt-3 text-sm text-gray-500">
       Set to <span className="font-semibold">0</span> to disable free shipping.
     </div>
-  </div>
+  </div> */}
 
 </div>
   );

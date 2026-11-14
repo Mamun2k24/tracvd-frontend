@@ -405,7 +405,8 @@ export default function ManualPaymentSelector({
             <div className="grid min-w-0 gap-2.5 sm:grid-cols-3 sm:gap-3">
               {[
                 ["১", `${paymentMethod} অ্যাপ খুলুন`],
-                ["২", "Send Money নির্বাচন করুন"],
+                ["২", "পেমেন্ট অপশন নির্বাচন করুন"],
+                ["৩", "গাড়ির নাম বা লাইসেন্স নাম্বার রেফারেন্স হিসেবে দিন"],
                 ["৩", "TrxID নিচে লিখুন"],
               ].map(([step, text]) => (
                 <div

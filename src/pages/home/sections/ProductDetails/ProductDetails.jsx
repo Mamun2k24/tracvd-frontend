@@ -303,8 +303,8 @@ export default function ProductDetails() {
     });
   };
 
-  const phoneNumber = "01635129195";
-  const whatsappNumber = "8801635129195";
+  const phoneNumber = "01892294141";
+  const whatsappNumber = "8801892294141";
 
   const handleWhatsAppOrder = () => {
     if (!ensureSelections()) return;

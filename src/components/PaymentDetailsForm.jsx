@@ -167,7 +167,7 @@ const PaymentDetailsForm = ({
       </div>
 
           {/* ২. Promotional Coupon Code Section */}
-      <div className="bg-white border border-slate-100 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+      {/* <div className="bg-white border border-slate-100 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div className="flex items-center justify-between">
           <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider">
             Have a promotional coupon?
@@ -219,7 +219,7 @@ const PaymentDetailsForm = ({
             </span>
           </div>
         )}
-      </div>
+      </div> */}
     </form>
   );
 };
