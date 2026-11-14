@@ -1,15 +1,102 @@
 
-import React from "react";
-import { Cpu } from "lucide-react";
+import React, { useMemo } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { Cpu, Video, Loader2 } from "lucide-react";
+
+// API Base URL
+const BASE = (
+  import.meta.env.VITE_APP_SERVER_URL ||
+  "http://localhost:5000"
+).replace(/\/+$/, "");
+
+// YouTube URL / Shorts / youtu.be / Embed URL Support
+function getYouTubeId(url = "") {
+  if (!url) return "";
+
+  try {
+    const parsed = new URL(url);
+
+    const host = parsed.hostname
+      .toLowerCase()
+      .replace(/^www\./, "")
+      .replace(/^m\./, "");
+
+    let id = "";
+
+    if (host === "youtu.be") {
+      id = parsed.pathname.split("/")[1];
+    } else if (
+      host === "youtube.com" ||
+      host === "youtube-nocookie.com"
+    ) {
+      if (parsed.pathname === "/watch") {
+        id = parsed.searchParams.get("v");
+      } else {
+        const parts = parsed.pathname.split("/");
+        if (
+          ["embed", "shorts", "live"].includes(parts[1])
+        ) {
+          id = parts[2];
+        }
+      }
+    }
+
+    return /^[a-zA-Z0-9_-]{11}$/.test(id || "")
+      ? id
+      : "";
+  } catch {
+    return /^[a-zA-Z0-9_-]{11}$/.test(url)
+      ? url
+      : "";
+  }
+}
 
 const VideoAndFeaturesSection = () => {
-  const youtubeVideoId = "nnUrLErFOg0";
+  // Admin Dashboard থেকে Active Videos Fetch
+  const {
+    data: videosData,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["publicActiveVideos"],
+    queryFn: async () => {
+      const res = await fetch(`${BASE}/api/videos`);
+
+      if (!res.ok) {
+        throw new Error("Failed to load videos");
+      }
+
+      return res.json();
+    },
+    staleTime: 60 * 1000,
+    refetchOnWindowFocus: true,
+  });
+
+  // Dashboard-এর সর্বশেষ Active Video
+  const activeVideo = useMemo(() => {
+    const list = Array.isArray(videosData?.items)
+      ? videosData.items
+      : [];
+
+    return list.find(
+      (video) => video.isActive !== false
+    ) || null;
+  }, [videosData]);
+
+  const videoId = useMemo(
+    () => getYouTubeId(activeVideo?.youtubeUrl || ""),
+    [activeVideo]
+  );
+
+  const videoEmbedUrl = videoId
+    ? `https://www.youtube-nocookie.com/embed/${videoId}?rel=0`
+    : "";
 
   return (
     <div className="w-full font-sans">
-
       {/* =====================================
           SECTION 1: PREMIUM GPS MAP BACKGROUND
+          ORIGINAL DESIGN PRESERVED
       ===================================== */}
 
       <section className="relative isolate w-full overflow-hidden bg-[#061526] px-4 py-12 text-white sm:px-6 md:py-20 lg:px-8">
@@ -40,7 +127,8 @@ const VideoAndFeaturesSection = () => {
                 transparent 1px
               )
             `,
-            backgroundSize: "auto, auto, 45px 45px, 45px 45px",
+            backgroundSize:
+              "auto, auto, 45px 45px, 45px 45px",
           }}
         />
 
@@ -172,45 +260,73 @@ const VideoAndFeaturesSection = () => {
           }}
         />
 
-        {/* Dark Overlay for Text Readability */}
+        {/* Dark Overlay */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-[#061526]/30 via-transparent to-[#061526]/70"
         />
 
         {/* =====================================
-            EXISTING VIDEO CONTENT
+            DYNAMIC VIDEO CONTENT
         ===================================== */}
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">
 
-          {/* YouTube Video */}
+          {/* Video Player */}
           <div className="relative mx-auto mb-8 aspect-video w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
 
-            <iframe
-              className="h-full w-full"
-              src={`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=0&rel=0`}
-              title="trackvd GPS Tracker"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
+            {isLoading ? (
+              <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-[#0A1B30]">
+                <Loader2
+                  size={32}
+                  className="animate-spin text-sky-400"
+                />
+                <p className="text-sm text-gray-400">
+                  ভিডিও লোড হচ্ছে...
+                </p>
+              </div>
+            ) : videoEmbedUrl ? (
+              <iframe
+                key={videoId}
+                className="h-full w-full"
+                src={videoEmbedUrl}
+                title={
+                  activeVideo?.title ||
+                  "Trackvio GPS Tracker"
+                }
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            ) : (
+              <div className="flex h-full w-full flex-col items-center justify-center gap-4 bg-[#0A1B30] px-5">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-sky-500/10">
+                  <Video
+                    size={30}
+                    className="text-sky-400"
+                  />
+                </div>
 
+                <p className="text-sm font-semibold text-gray-300 sm:text-base">
+                  {isError
+                    ? "ভিডিও লোড করা যাচ্ছে না"
+                    : "ভিডিও শীঘ্রই আসছে"}
+                </p>
+              </div>
+            )}
           </div>
 
-          {/* Title */}
+          {/* Dynamic Title */}
           <h2 className="mb-4 text-xl font-bold leading-snug text-[#E5A823] sm:text-2xl md:text-3xl">
-            trackvd GPS Tracker টেনশনলেস জীবন দিচ্ছে,
-            দায়বদ্ধতা নিচ্ছে...
+            {activeVideo?.title ||
+              "Trackvio GPS Tracker টেনশনলেস জীবন দিচ্ছে, দায়বদ্ধতা নিচ্ছে..."}
           </h2>
 
-          {/* Description */}
+          {/* Dynamic Description */}
           <p className="mx-auto max-w-3xl text-xs leading-relaxed text-gray-300 sm:text-sm md:text-base">
-            trackvd-এর GPS ট্র্যাকিং সল্যুশনের মাধ্যমে
-            আপনার গাড়ির অবস্থান পর্যবেক্ষণ ও ভেহিকেল
-            ম্যানেজমেন্ট আরও সহজ করুন। আপনার প্রয়োজন
-            অনুযায়ী ট্র্যাকিং ডিভাইস ও সেবা সম্পর্কে
-            বিস্তারিত জানতে আমাদের সঙ্গে যোগাযোগ করুন।
+            {activeVideo?.description ||
+              "Trackvio-এর GPS ট্র্যাকিং সল্যুশনের মাধ্যমে আপনার গাড়ির অবস্থান পর্যবেক্ষণ ও ভেহিকেল ম্যানেজমেন্ট আরও সহজ করুন। আপনার প্রয়োজন অনুযায়ী ট্র্যাকিং ডিভাইস ও সেবা সম্পর্কে বিস্তারিত জানতে আমাদের সঙ্গে যোগাযোগ করুন।"}
           </p>
 
         </div>
@@ -220,14 +336,14 @@ const VideoAndFeaturesSection = () => {
           SECTION 2: FEATURE CARDS
           EXISTING DESIGN PRESERVED
       ===================================== */}
-
+{/* 
       <section className="w-full bg-white px-4 py-12 sm:px-6 md:py-16 lg:px-8">
 
         <div className="mx-auto max-w-4xl">
 
           <div className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2">
 
-            {/* Feature Card 1 */}
+          
             <div className="group flex min-h-[220px] flex-col items-center justify-center rounded-xl bg-[#FCB017] p-8 text-center text-gray-900 shadow-md transition-all duration-300 hover:shadow-xl sm:p-10">
 
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-900/80 transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20">
@@ -239,12 +355,12 @@ const VideoAndFeaturesSection = () => {
               <h3 className="text-base font-bold leading-snug sm:text-lg">
                 সম্পূর্ণ দেশীয় প্রযুক্তিতে
                 <br />
-                তৈরি অন্যরকম trackvd
+                তৈরি অন্যরকম Trackvio
               </h3>
 
             </div>
 
-            {/* Feature Card 2 */}
+          
             <div className="group flex min-h-[220px] flex-col items-center justify-center rounded-xl bg-[#FCB017] p-8 text-center text-gray-900 shadow-md transition-all duration-300 hover:shadow-xl sm:p-10">
 
               <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full border-2 border-gray-900/80 transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20">
@@ -260,6 +376,7 @@ const VideoAndFeaturesSection = () => {
                   </span>
 
                 </div>
+
               </div>
 
               <h3 className="text-base font-bold leading-snug sm:text-lg">
@@ -272,7 +389,7 @@ const VideoAndFeaturesSection = () => {
 
           </div>
 
-          {/* Action Button */}
+
           <div className="text-center">
 
             <a
@@ -285,7 +402,7 @@ const VideoAndFeaturesSection = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
     </div>
   );

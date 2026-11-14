@@ -23,7 +23,7 @@ const DEFAULTS = {
 export default function DemoPage() {
   const [settings, setSettings] = useState(DEFAULTS);
   const [form, setForm] = useState({
-    name: "",
+    name: "Trackvio",
     phone: "",
     vehicle: "",
     website: "",

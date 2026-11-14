@@ -207,7 +207,7 @@ function DemoForm() {
 
   const [enabled, setEnabled] = useState(true);
 
-  const [title, setTitle] = useState("ফর্মটি পূরণ করেTrackvio GPS ট্র্যাকারের ডেমো দেখুন!");
+  const [title, setTitle] = useState("ফর্মটি পূরণ করে Trackvio GPS ট্র্যাকারের ডেমো দেখুন!");
 
   const [notice, setNotice] = useState("");
 
@@ -441,7 +441,7 @@ function DemoSection() {
 
             src={TRACKING_IMAGE}
 
-            alt="trackvd GPS live vehicle tracking demonstration"
+            alt="Trackvio GPS live vehicle tracking demonstration"
 
             loading="lazy"
 
@@ -921,7 +921,7 @@ export default function PricingPage() {
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-40" style={{ backgroundImage: "radial-gradient(#93aebc 0.65px, transparent 0.65px)", backgroundSize: "24px 24px" }} />
         <div className="relative mx-auto max-w-6xl px-4">
           <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_18px_55px_rgba(28,64,91,.09)]">
-            <img src={BANNER} alt="trackvd GPS tracking package banner" className="block h-auto w-full rounded-xl object-contain" />
+            <img src={BANNER} alt="Trackvio GPS tracking package banner" className="block h-auto w-full rounded-xl object-contain" />
           </div>
           <div className="mt-9 text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-3 py-1.5 text-xs font-semibold text-orange-700"><Sparkles size={14}/> Choose your tracking plan</span>

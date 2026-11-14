@@ -120,7 +120,7 @@ export default function NewFooter({ onSubscribe }) {
   const [subscribeMessage, setSubscribeMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  const company = "trackvd";
+  const company = "Trackvio";
 
   const logoSrc = settings?.logoUrl || logo;
   const address = settings?.address || "";
@@ -409,11 +409,11 @@ export default function NewFooter({ onSubscribe }) {
 
             {/* Company Information */}
             <div className="lg:col-span-4">
-              <Link to="/" className="inline-block" aria-label="trackvd Home">
+              <Link to="/" className="inline-block" aria-label="Trackvio Home">
                 <div className="inline-flex rounded-xl bg-white px-4 py-3">
                   <img
                     src={logoSrc}
-                    alt="trackvd Logo"
+                    alt="Trackvio Logo"
                     className="h-12 max-w-[170px] object-contain"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
