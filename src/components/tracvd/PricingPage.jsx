@@ -44,6 +44,7 @@ import {
 
 import PopularProduct from "../../pages/home/sections/popularProducts/PopularProducts";
 import ReviewSection from "./ReviewSection";
+import FlashSalePurple from "../zozo/FlashSalePurple";
 
 const BANNER =
 
@@ -923,14 +924,20 @@ export default function PricingPage() {
           <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_18px_55px_rgba(28,64,91,.09)]">
             <img src={BANNER} alt="Trackvio GPS tracking package banner" className="block h-auto w-full rounded-xl object-contain" />
           </div>
+
+          
           <div className="mt-9 text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-orange-100 px-3 py-1.5 text-xs font-semibold text-orange-700"><Sparkles size={14}/> Choose your tracking plan</span>
             <h2 className="mt-3 text-2xl font-bold text-slate-900 md:text-3xl">আপনার প্রয়োজন অনুযায়ী GPS ট্র্যাকিং প্যাকেজ দেখুন</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-600">প্যাকেজের মূল্য, মাসিক চার্জ ও ফিচার দেখে আপনার জন্য উপযুক্ত GPS ট্র্যাকার নির্বাচন করুন।</p>
           </div>
+
+        
           <div id="pricing-products" className="scroll-mt-24 pt-7"><PopularProduct /></div>
         </div>
       </section>
+
+     
       <DemoSection />
       <ReviewSection />
       <ComparisonSection />

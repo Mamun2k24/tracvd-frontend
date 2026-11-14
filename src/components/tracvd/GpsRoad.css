@@ -1,0 +1,107 @@
+
+.gps-pro-road {
+  background: linear-gradient(
+    to bottom,
+    #202c39 0%,
+    #202c39 20%,
+    #131a25 20%,
+    #131a25 80%,
+    #202c39 80%,
+    #202c39 100%
+  );
+}
+
+.gps-pro-top-edge,
+.gps-pro-bottom-edge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #d9e1e8;
+  opacity: 0.7;
+}
+
+.gps-pro-top-edge {
+  top: 20%;
+}
+
+.gps-pro-bottom-edge {
+  bottom: 20%;
+}
+
+.gps-pro-center-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    to right,
+    #f8c652 0px,
+    #f8c652 37px,
+    transparent 37px,
+    transparent 69px
+  );
+  background-size: 69px 100%;
+  animation: gps-line-scroll 2s linear infinite;
+}
+
+.gps-pro-vehicle {
+  position: absolute;
+  left: 0;
+  width: max-content;
+  z-index: 10;
+  will-change: left, transform;
+  animation-duration: var(--speed);
+  animation-delay: var(--delay);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.gps-pro-icon {
+  filter: drop-shadow(0 5px 3px rgba(0, 0, 0, 0.5));
+}
+
+.gps-pro-right {
+  animation-name: gps-move-right;
+}
+
+.gps-pro-left {
+  animation-name: gps-move-left;
+}
+
+@keyframes gps-move-right {
+  from {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    left: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes gps-move-left {
+  from {
+    left: 100%;
+    transform: translateX(0);
+  }
+  to {
+    left: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes gps-line-scroll {
+  to {
+    background-position-x: -69px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gps-pro-vehicle,
+  .gps-pro-center-line {
+    animation: none;
+  }
+}

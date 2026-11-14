@@ -10,6 +10,7 @@ import FeaturesBanner from "../../components/ui/FeaturesBanner";
 import BenefitsAndSecuritySection from "../../components/tracvd/BenefitsAndSecuritySection";
 import VideoAndFeaturesSection from "../../components/tracvd/VideoAndFeaturesSection";
 import trackvdSections from "../../components/tracvd/TrackvdSections";
+import GpsRoad from "../../components/tracvd/GpsRoad";
 
 // Lazy Components
 const OurBrands = lazy(() => import("../../components/OurBrands"));
@@ -81,7 +82,8 @@ const Home = () => {
 
 
       <HeroSlider />
-
+      <FlashSalePurple />
+<GpsRoad />
       {/* <FlashSalePurple /> */}
       <BenefitsAndSecuritySection />
       <VideoAndFeaturesSection />

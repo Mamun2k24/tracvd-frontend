@@ -115,7 +115,7 @@ const BrandModal = ({
       <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
         <div className="mb-4 flex items-center justify-between">
           <h3 className="text-xl font-semibold text-gray-800">
-            {mode === "add" ? "Add Brand" : "Edit Brand"}
+            {mode === "add" ? "Add Clints" : "Edit Brand"}
           </h3>
           <button
             onClick={onClose}

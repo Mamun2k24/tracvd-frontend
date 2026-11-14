@@ -160,7 +160,7 @@ const AdminBrands = () => {
         ) : brands.length === 0 ? (
           <div className="rounded-2xl border bg-white p-10 text-center text-gray-500 shadow-sm">
             No brands added yet. Click{" "}
-            <span className="font-semibold">Add Brand</span> to create one.
+            <span className="font-semibold">Add Clints</span> to create one.
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
