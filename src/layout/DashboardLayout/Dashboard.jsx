@@ -159,6 +159,11 @@ export default function Dashboard() {
             icon: <FaChartLine />,
             label: "Reports",
           },
+          {
+  to: "/dashboard/monthly-payments",
+  icon: <FiCreditCard />,
+  label: "Monthly Payments",
+},
         ],
       },
       {
@@ -210,6 +215,7 @@ export default function Dashboard() {
       {
         title: "Marketing",
         items: [
+          { to: "/dashboard/blogs", icon: <FiFileText />, label: "Blog Management" },
           {
             to: "/dashboard/coupon",
             icon: <FiPercent />,

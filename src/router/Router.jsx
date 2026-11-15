@@ -183,6 +183,21 @@ const ForgotPassword = lazy(() => import("../pages/ForgotPassword"));
 const OrderSuccess = lazy(() => import("../pages/OrderSuccess"));
 const AboutPage = lazy(() => import("../components/about/AboutPag"));
 
+
+import Blog from "../components/tracvd/Blog";
+import BlogCategory from "../components/tracvd/BlogCategory";
+import BlogDetails from "../components/tracvd/BlogDetails";
+import BlogManager from "../components/tracvd/BlogManager";
+
+const MonthlyPayment = lazy(() =>
+  import("../components/tracvd/MonthlyPayment"),
+);
+
+const MonthlyPaymentsDashboard = lazy(() =>
+  import("../components/tracvd/MonthlyPaymentsDashboard")
+);
+
+
 const KroyKoriContactPage = lazy(
   () => import("../components/contact/KroyKoriContactPage"),
 );
@@ -207,9 +222,7 @@ const DemoPage = lazy(() =>
 const DemoRequestsDashboard = lazy(() =>
   import("../components/tracvd/DemoRequestsDashboard")
 );
-const Blog = lazy(() =>
-  import("../components/tracvd/Blog")
-);
+
 
 const CreateLandingPage = lazy(
   () => import("../pages/dashboard/CreateLandingPage"),
@@ -267,6 +280,7 @@ export const router = createBrowserRouter(
         },
         { path: "/about", element: loadable(AboutPage) },
         { path: "/contact", element: loadable(KroyKoriContactPage) },
+
         { path: "/order-success", element: loadable(OrderSuccess) },
         {
           path: "/categories",
@@ -277,32 +291,44 @@ export const router = createBrowserRouter(
           path: "category/:slug/:subSlug",
           element: loadable(SectionCategoriDetails),
         },
-// trackvd Public Pages
+        // trackvd Public Pages
 
-{
-  path: "corporate",
-  element: loadable(CorporatePage),
-},
-{
-  path: "clients",
-  element: loadable(ClientsPage),
-},
-{
-  path: "pricing",
-  element: loadable(PricingPage),
-},
-{
-  path: "demo",
-  element: loadable(DemoPage),
-},
-{
-  path: "blog",
-  element: loadable(Blog),
-},
-// {
-//   path: "about",
-//   element: loadable(AboutPage),
-// },
+        {
+          path: "corporate",
+          element: loadable(CorporatePage),
+        },
+        {
+          path: "clients",
+          element: loadable(ClientsPage),
+        },
+        {
+          path: "pricing",
+          element: loadable(PricingPage),
+        },
+        {
+          path: "demo",
+          element: loadable(DemoPage),
+        },
+        {
+          path: "blog",
+          element: <Blog />,
+        },
+        {
+          path: "blog/category/:category",
+          element: <BlogCategory />,
+        },
+        {
+          path: "blog/:slug",
+          element: <BlogDetails />,
+        },
+        {
+          path: "monthly-payment",
+          element: loadable(MonthlyPayment),
+        },
+        // {
+        //   path: "about",
+        //   element: loadable(AboutPage),
+        // },
         // Auth & Checkout
         { path: "login", element: loadable(Signup) },
         { path: "otp-verify", element: loadable(Otp) },
@@ -356,6 +382,22 @@ export const router = createBrowserRouter(
           path: "video",
           element: <AdminRoute>{loadable(AdminVideoManager)}</AdminRoute>,
         },
+        {
+          path: "blogs",
+          element: (
+            <AdminRoute>
+              <BlogManager />
+            </AdminRoute>
+          ),
+        },
+        {
+  path: "monthly-payments",
+  element: (
+    <AdminRoute>
+      {loadable(MonthlyPaymentsDashboard)}
+    </AdminRoute>
+  ),
+},
         {
           path: "product",
           element: <AdminRoute>{loadable(Product)}</AdminRoute>,

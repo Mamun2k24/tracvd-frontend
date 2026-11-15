@@ -1,219 +1,4 @@
 
-// import React, { useState, useEffect } from "react";
-// import { NavLink, Link, useLocation } from "react-router-dom";
-// import { Menu, X, Users } from "lucide-react";
-// import logo from "../../assets/images/logo.png";
-
-// const Navigation = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const [language, setLanguage] = useState("Eng");
-//   const location = useLocation();
-
-//   const navLinks = [
-//     { title: "কর্পোরেট", href: "/corporate" },
-//     { title: "শীর্ষ ক্লায়েন্টসমূহ", href: "/clients" },
-//     { title: "দরদাম", href: "/pricing" },
-//     { title: "ফ্রি ডেমো", href: "/demo" },
-//     { title: "ব্লগ", href: "/blog" },
-//     { title: "আমাদের সম্পর্কে", href: "/about" },
-//   ];
-
-//   // Route change হলে mobile menu বন্ধ হবে
-//   useEffect(() => {
-//     setIsOpen(false);
-//   }, [location.pathname]);
-
-//   // Mobile menu খোলা থাকলে background scroll বন্ধ
-//   useEffect(() => {
-//     document.body.style.overflow = isOpen ? "hidden" : "";
-
-//     return () => {
-//       document.body.style.overflow = "";
-//     };
-//   }, [isOpen]);
-
-//   // Escape key দিয়ে mobile menu বন্ধ
-//   useEffect(() => {
-//     const handleEscape = (event) => {
-//       if (event.key === "Escape") {
-//         setIsOpen(false);
-//       }
-//     };
-
-//     window.addEventListener("keydown", handleEscape);
-
-//     return () => {
-//       window.removeEventListener("keydown", handleEscape);
-//     };
-//   }, []);
-
-//   const desktopLinkClass = ({ isActive }) =>
-//     `relative whitespace-nowrap text-base font-medium
-//     transition-colors duration-200
-//     ${
-//       isActive
-//         ? "text-[#E85125]"
-//         : "text-gray-700 hover:text-[#E85125]"
-//     }`;
-
-//   const mobileLinkClass = ({ isActive }) =>
-//     `block w-full text-lg font-medium
-//     transition-colors duration-200
-//     ${
-//       isActive
-//         ? "text-[#E85125]"
-//         : "text-gray-800 hover:text-[#E85125]"
-//     }`;
-
-//   return (
-//     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
-//       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-//         <div className="flex h-20 items-center justify-between">
-
-//           {/* ================= LOGO ================= */}
-//           <div className="flex-shrink-0">
-//             <Link
-//               to="/"
-//               className="flex items-center"
-//               onClick={() => setIsOpen(false)}
-//             >
-//               <img
-//                 src={logo}
-//                 alt="trackvd Logo"
-//                 className="h-12 w-auto object-contain"
-//               />
-//             </Link>
-//           </div>
-
-//           {/* ================= DESKTOP MENU ================= */}
-//           <nav
-//             className="hidden items-center space-x-6 lg:flex xl:space-x-8"
-//             aria-label="Main navigation"
-//           >
-//             {navLinks.map((link) => (
-//               <NavLink
-//                 key={link.href}
-//                 to={link.href}
-//                 className={desktopLinkClass}
-//               >
-//                 {link.title}
-//               </NavLink>
-//             ))}
-//           </nav>
-
-//           {/* ================= DESKTOP RIGHT ================= */}
-//           <div className="hidden items-center space-x-6 lg:flex">
-
-//             {/* Phone Number */}
-//             <a
-//               href="tel:01892294141"
-//               className="flex items-center gap-2 text-base font-semibold text-gray-800 transition-colors hover:text-[#E85125]"
-//             >
-//               <Users className="h-5 w-5 text-gray-700" />
-//               <span>01892294141</span>
-//             </a>
-
-//             {/* Language Button */}
-//             <button
-//               type="button"
-//               className="rounded-full border-2 border-gray-400 px-4 py-1 text-sm font-medium text-gray-700 transition-colors duration-200 hover:border-[#E85125] hover:text-[#E85125]"
-//               aria-label="Language"
-//             >
-//               {language}
-//             </button>
-//           </div>
-
-//           {/* ================= MOBILE MENU BUTTON ================= */}
-//           <div className="flex items-center lg:hidden">
-//             <button
-//               type="button"
-//               onClick={() => setIsOpen(true)}
-//               className="p-2 text-gray-700 transition-colors hover:text-[#E85125] focus:outline-none"
-//               aria-label="Open navigation menu"
-//               aria-expanded={isOpen}
-//             >
-//               <Menu className="h-8 w-8" />
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* ================= MOBILE MENU OVERLAY ================= */}
-//       {isOpen && (
-//         <div className="fixed inset-0 z-[100] flex flex-col overflow-y-auto bg-white lg:hidden">
-
-//           {/* Mobile Header */}
-//           <div className="flex items-center justify-between border-b border-gray-100 px-6 py-4">
-//             <Link
-//               to="/"
-//               onClick={() => setIsOpen(false)}
-//             >
-//               <img
-//                 src={logo}
-//                 alt="trackvd Logo"
-//                 className="h-9 w-auto object-contain"
-//               />
-//             </Link>
-
-//             <button
-//               type="button"
-//               onClick={() => setIsOpen(false)}
-//               className="p-2 text-[#E85125] transition-opacity hover:opacity-80"
-//               aria-label="Close navigation menu"
-//             >
-//               <X className="h-8 w-8" />
-//             </button>
-//           </div>
-
-//           {/* Mobile Navigation */}
-//           <nav
-//             className="flex-1 px-6 py-2"
-//             aria-label="Mobile navigation"
-//           >
-//             <ul className="divide-y divide-gray-200">
-
-//               {navLinks.map((link) => (
-//                 <li key={link.href} className="py-4">
-//                   <NavLink
-//                     to={link.href}
-//                     onClick={() => setIsOpen(false)}
-//                     className={mobileLinkClass}
-//                   >
-//                     {link.title}
-//                   </NavLink>
-//                 </li>
-//               ))}
-
-//               {/* Mobile Phone */}
-//               <li className="py-4">
-//                 <a
-//                   href="tel:01892294141"
-//                   className="flex items-center gap-3 text-lg font-semibold text-gray-800"
-//                 >
-//                   <Users className="h-5 w-5" />
-//                   <span>01892294141</span>
-//                 </a>
-//               </li>
-
-//               {/* Mobile Language */}
-//               <li className="py-4">
-//                 <button
-//                   type="button"
-//                   className="rounded-full border border-gray-400 px-5 py-1.5 text-base font-medium text-gray-800"
-//                   aria-label="Language"
-//                 >
-//                   {language}
-//                 </button>
-//               </li>
-//             </ul>
-//           </nav>
-//         </div>
-//       )}
-//     </header>
-//   );
-// };
-
-// export default Navigation;
 
 import React, { useState, useEffect, useRef } from "react";
 import {
@@ -237,11 +22,13 @@ import {
   Info,
   ShieldCheck,
   Headphones,
+  CreditCard,
 } from "lucide-react";
 
 import logo from "../../assets/images/logo.png";
 
 const PHONE = "01892294141";
+
 
 const navLinks = [
   {
@@ -260,6 +47,11 @@ const navLinks = [
     icon: BadgeDollarSign,
   },
   {
+    title: "মাসিক বিল",
+    href: "/monthly-payment",
+    icon: CreditCard,
+  },
+  {
     title: "ফ্রি ডেমো",
     href: "/demo",
     icon: Gift,
@@ -276,6 +68,7 @@ const navLinks = [
     icon: Info,
   },
 ];
+
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

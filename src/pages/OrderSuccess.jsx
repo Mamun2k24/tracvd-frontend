@@ -354,7 +354,7 @@ const OrderSuccess = () => {
               href="tel:+8801892294141" 
               className="inline-flex items-center gap-1 bg-slate-100 text-slate-700 hover:bg-slate-200 px-3 py-2 rounded-xl transition"
             >
-              <PhoneCall className="w-3.5 h-3.5" /> +880 01714457750
+              <PhoneCall className="w-3.5 h-3.5" /> 01892294141
             </a>
           </div>
         </div>

@@ -1,106 +1,67 @@
-import React from "react";
-import { ChevronRight } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { ArrowRight, Search, BookOpen, CalendarDays } from "lucide-react";
+import { blogFetch, BLOG_CATEGORIES, blogDate } from "../../components/tracvd/blogApi";
 
-// Static data for now. Replace this array with API data later.
-const blogSections = [
-  {
-    title: "ভেহিকেল ট্র্যাকিং সিস্টেম",
-    slug: "vehicle-tracking-system",
-    posts: [
-      { title: "আপনার গাড়ি কি অনুমোদিত রুটের বাইরে চলছে? জিপিএস ট্র্যাকিং জানাবে", image: "https://prohori.com/wp-content/uploads/2025/10/is-your-car-driving-outside-the-approved-route-bn-thumb-300x150.webp" },
-      { title: "বাংলাদেশে গাড়ি চুরির পরিসংখ্যান — কেন গাড়ি সতর্ক রাখবেন?", image: "https://prohori.com/wp-content/uploads/2025/10/car-theft-statistics-bangladesh-bn-thumbnail-300x150.webp" },
-      { title: "গাড়ির তেল এবং জ্বালানি খরচ কমাতে জিপিএস ট্র্যাকারের ভূমিকা", image: "https://prohori.com/wp-content/uploads/2025/10/reduce-fuel-toll-with-gps-tracker-300x150.webp" },
-    ],
-  },
-  {
-    title: "গাড়ির গল্প",
-    slug: "car-stories",
-    posts: [
-      { title: "গাড়ি নাকি বিমান? Tesla Flying Roadster নিয়ে অবাক প্রযুক্তি!", image: "https://prohori.com/wp-content/uploads/2026/10/tesla-flying-roadster-300x150.webp" },
-      { title: "ঢাকায় গাড়ির অ্যাক্সেসরিজ কেনার আগে যা জানা প্রয়োজন", image: "https://prohori.com/wp-content/uploads/2024/09/car-accessories-shop-in-dhaka-300x150.webp" },
-      { title: "গাড়ির সাইলেন্সার থেকে পানি পড়ার কারণ ও সমাধান", image: "https://prohori.com/wp-content/uploads/2024/08/causes-and-solutions-of-water-leaking-from-car-silencer-300x150.jpg" },
-    ],
-  },
-  {
-    title: "জিপিএস ট্র্যাকার",
-    slug: "gps-tracker",
-    posts: [
-      { title: "আপনার গাড়ির জ্বালানি চুরি হচ্ছে কিনা কীভাবে বুঝবেন?", image: "https://prohori.com/wp-content/uploads/2025/12/how-do-you-know-if-your-cars-fuel-is-stolen-300x150.webp" },
-      { title: "জিপিএস ট্র্যাকিং: গাড়ির মালিক ও ড্রাইভারের জন্য সহজ সমাধান", image: "https://prohori.com/wp-content/uploads/2025/10/gps-tracking-for-car-owners-bn-thumb-300x150.webp" },
-      { title: "অনুমোদিত রুটের বাইরে গাড়ি গেলে কীভাবে জানতে পারবেন?", image: "https://prohori.com/wp-content/uploads/2025/10/is-your-car-driving-outside-the-approved-route-bn-thumb-300x150.webp" },
-    ],
-  },
-  {
-    title: "গাড়ির টিপস",
-    slug: "car-tips",
-    posts: [
-      { title: "গাড়ির সাইলেন্সার থেকে পানি পড়লে কী করবেন?", image: "https://prohori.com/wp-content/uploads/2024/08/causes-and-solutions-of-water-leaking-from-car-silencer-300x150.jpg" },
-      { title: "গাড়ির জন্য প্রয়োজনীয় অ্যাক্সেসরিজ বেছে নেওয়ার উপায়", image: "https://prohori.com/wp-content/uploads/2024/09/car-accessories-shop-in-dhaka-300x150.webp" },
-      { title: "গাড়ির জ্বালানি খরচ কমানোর কার্যকর উপায়", image: "https://prohori.com/wp-content/uploads/2025/10/reduce-fuel-toll-with-gps-tracker-300x150.webp" },
-    ],
-  },
-  {
-    title: "অটোমোবাইল",
-    slug: "automobile",
-    posts: [
-      { title: "গাড়ির নিরাপত্তায় আধুনিক প্রযুক্তির ভূমিকা", image: "https://prohori.com/wp-content/uploads/2025/10/car-theft-statistics-bangladesh-bn-thumbnail-300x150.webp" },
-      { title: "গাড়ির রুট ও চলাচল সম্পর্কে গুরুত্বপূর্ণ তথ্য", image: "https://prohori.com/wp-content/uploads/2025/10/is-your-car-driving-outside-the-approved-route-bn-thumb-300x150.webp" },
-      { title: "নতুন গাড়ি প্রযুক্তি: Tesla Flying Roadster", image: "https://prohori.com/wp-content/uploads/2026/10/tesla-flying-roadster-300x150.webp" },
-    ],
-  },
-];
-
-function BlogCard({ post }) {
-  return (
-    <article className="group overflow-hidden rounded-[2px] bg-white shadow-[0_2px_7px_rgba(0,0,0,0.13)] transition-shadow duration-200 hover:shadow-lg">
-      <div className="aspect-[2/1] w-full overflow-hidden bg-gray-200">
-        <img
-          src={post.image}
-          alt={post.title}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.035]"
-        />
-      </div>
-      <div className="min-h-[77px] px-3 py-3 sm:px-4">
-        <h3 className="text-[14px] font-semibold leading-[1.55] text-[#171717] sm:text-[15px]">
-          {post.title}
-        </h3>
-      </div>
-    </article>
-  );
-}
-
-export default function BlogPage() {
-  return (
-    <main className="w-full bg-white font-sans text-gray-900">
-      {blogSections.map((section, index) => (
-        <section
-          key={section.slug}
-          id={section.slug}
-          className={index % 2 === 0 ? "bg-gradient-to-br from-[#FFF7ED] via-[#F8FAFC] to-[#EAF3FF]" : "bg-white"}
-        >
-          <div className="mx-auto max-w-[1080px] px-4 py-9 sm:px-6 sm:py-11 lg:px-8 lg:py-12">
+const Card = ({ item }) => (
+    <Link to={`/blog/${encodeURIComponent(item.slug)}`} className="group overflow-hidden rounded-lg border border-slate-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <div className="aspect-[16/9] overflow-hidden bg-slate-100">
+            {item.coverImage ? <img src={item.coverImage} alt={item.imageAlt || item.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" /> : <div className="flex h-full items-center justify-center bg-gradient-to-br from-sky-100 to-slate-200"><BookOpen size={36} className="text-blue-500" /></div>}
+        </div>
+        <div className="px-3 py-3 sm:px-4">
+            <p className="line-clamp-2 min-h-[2.8em] text-sm font-bold leading-6 text-slate-900 group-hover:text-blue-700">{item.title}</p>
+            <p className="mt-2 flex items-center gap-1 text-xs text-slate-500"><CalendarDays size={13} /> {blogDate(item.publishedAt || item.createdAt)}</p>
+        </div>
+    </Link>
+);
+const Section = ({ title, items }) => (
+    <section className="py-9 sm:py-12 even:bg-gradient-to-r even:from-white even:to-sky-50 odd:bg-[#F8FAFC]">
+        <div className="mx-auto max-w-6xl px-4">
             <div className="mb-5 flex items-center justify-between gap-3">
-              <h2 className="border-l-[3px] border-[#f15b37] pl-3 text-base font-bold leading-6 text-[#161616] sm:text-lg">
-                {section.title}
-              </h2>
-              {/* Static page: jump to this section, without pretending a category route exists. */}
-              <a
-                href={`#${section.slug}`}
-                className="inline-flex shrink-0 items-center gap-1 text-[13px] font-medium text-[#f15b37] hover:underline"
-                aria-label={`${section.title} বিভাগ দেখুন`}
-              >
-                আরও দেখুন <ChevronRight size={16} strokeWidth={2} />
-              </a>
+                <h2 className="border-l-[3px] border-blue-600 pl-3 text-lg font-bold text-slate-900 sm:text-xl">{title}</h2>
+                <Link to={`/blog/category/${encodeURIComponent(title)}`} className="inline-flex shrink-0 items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-800 sm:text-sm">আরও দেখুন <ArrowRight size={15} /></Link>
             </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {section.posts.map((post, postIndex) => (
-                <BlogCard key={`${section.slug}-${postIndex}`} post={post} />
-              ))}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">{items.map(x => <Card key={x._id} item={x} />)}</div>
+        </div>
+    </section>
+);
+export default function Blog() {
+    const [params, setParams] = useSearchParams();
+    const [search, setSearch] = useState(params.get("search") || "");
+    const [groups, setGroups] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
+    const query = params.get("search") || "";
+    useEffect(() => {
+        let alive = true; setLoading(true); setError("");
+        blogFetch("/categories")
+            .then(({ items: categories = [] }) => {
+                const names = [...new Set([...BLOG_CATEGORIES, ...categories.map(c => c.name)])];
+                return Promise.all(names.map(async name => {
+                    const d = await blogFetch(`?category=${encodeURIComponent(name)}&limit=3${query ? `&search=${encodeURIComponent(query)}` : ""}`);
+                    return { name, items: d.items || [] };
+                }));
+            })
+            .then(result => { if (alive) setGroups(result.filter(g => g.items.length > 0)); })
+            .catch(e => { if (alive) setError(e.message); })
+            .finally(() => { if (alive) setLoading(false); });
+        return () => { alive = false; };
+    }, [query]);
+    return <main className="min-h-screen bg-slate-50 text-slate-900">
+        <div className="border-b border-slate-200 bg-gradient-to-r from-white via-sky-50 to-blue-50 py-10">
+            <div className="mx-auto max-w-6xl px-4">
+                <h1 className="text-3xl font-extrabold sm:text-4xl">Trackvio <span className="text-blue-600">Blog</span></h1>
+                <p className="mt-2 text-sm text-slate-600">জিপিএস ট্র্যাকিং, গাড়ির নিরাপত্তা ও অটোমোবাইল বিষয়ে দরকারি লেখা।</p>
+                <form className="mt-6 flex max-w-lg items-center gap-2" onSubmit={e => { e.preventDefault(); setParams(search.trim() ? { search: search.trim() } : {}); }}>
+                    <div className="flex flex-1 items-center gap-2 rounded-xl border border-slate-200 bg-white px-3"><Search size={18} className="text-slate-400" /><input value={search} onChange={e => setSearch(e.target.value)} placeholder="ব্লগ খুঁজুন..." className="w-full py-3 text-sm outline-none" /></div>
+                    <button className="rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700">খুঁজুন</button>
+                </form>
             </div>
-          </div>
-        </section>
-      ))}
-    </main>
-  );
+        </div>
+        {loading && <p className="py-20 text-center text-slate-500">ব্লগ লোড হচ্ছে...</p>}
+        {error && <p role="alert" className="mx-auto max-w-6xl px-4 py-12 text-red-600">{error}</p>}
+        {!loading && !error && groups.length === 0 && <div className="mx-auto max-w-6xl px-4 py-20 text-center text-slate-500">এখনো কোনো প্রকাশিত ব্লগ পাওয়া যায়নি।</div>}
+        {!loading && !error && groups.map(group => <Section key={group.name} title={group.name} items={group.items} />)}
+        {!loading && !error && query && <div className="py-8 text-center"><Link to="/blog" className="font-semibold text-blue-600">সব ব্লগ দেখুন</Link></div>}
+    </main>;
 }
